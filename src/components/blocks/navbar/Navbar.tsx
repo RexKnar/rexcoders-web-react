@@ -80,7 +80,7 @@ const Navbar: FC<NavbarProps> = (props) => {
                   <li className="nav-item dropdown" key={id}>
                     <DropdownToggleLink title={title} className="nav-link dropdown-toggle" />
                     <ul className="dropdown-menu">
-                      {children.map(({ id, title,path, children }) => (
+                      {children.map(({ id, title,path, children }:any) => (
                         <li className="dropdown dropdown-submenu dropend" key={id}>
                           <DropdownToggleLink title={title} className="dropdown-item dropdown-toggle" />
                           <ul className="dropdown-menu">{renderLinks(children)}</ul>
