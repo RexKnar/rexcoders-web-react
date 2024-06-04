@@ -1,7 +1,7 @@
 
 
 // pages navigations
-const navItems=[
+const navItems : any[]=[
 //   {
 //   id: 1,
 //   title: 'Home',
