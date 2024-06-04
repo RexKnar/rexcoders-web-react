@@ -6,7 +6,7 @@ import Carousel from 'components/reuseable/Carousel';
 import { BE_BASE_URL } from 'utils/constants/config';
 
 
-const ShortCourseList: FC = ({courseList}:any) => {
+function  ShortCourseList ({courseList}:any){
 
 
 

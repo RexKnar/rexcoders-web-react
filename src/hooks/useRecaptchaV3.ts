@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 
-const useRecaptchaV3 = (siteKey: unknown) => {
+const useRecaptchaV3 = (siteKey: any) => {
     const [isRecaptchaReady, setIsRecaptchaReady] = useState(false);
 
     useEffect(() => {
-        if (window.grecaptcha) {
+        if (window?.grecaptcha) {
             setIsRecaptchaReady(true);
         } else {
             const script = document.createElement('script');
@@ -16,8 +16,8 @@ const useRecaptchaV3 = (siteKey: unknown) => {
     }, [siteKey]);
 
     const executeRecaptcha = useCallback(async (action: any) => {
-        if (isRecaptchaReady && window.grecaptcha) {
-            return await window.grecaptcha.execute(siteKey, { action });
+        if (isRecaptchaReady && window?.grecaptcha) {
+            return await window?.grecaptcha.execute(siteKey, { action });
         }
         return null;
     }, [isRecaptchaReady, siteKey]);
