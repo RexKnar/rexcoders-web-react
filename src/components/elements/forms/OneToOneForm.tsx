@@ -10,7 +10,7 @@ const OneToOneForm: FC = () => {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const recaptchaToken = await executeRecaptcha('onetoone');
+    const recaptchaToken : any = await executeRecaptcha('onetoone');
     console.log(recaptchaToken);
     let status = await verifyRecaptchaV3({ token: recaptchaToken, form: 'onetoone' });
   };
