@@ -151,12 +151,13 @@ const Navbar: FC<NavbarProps> = (props) => {
       <nav ref={navbarRef} className={sticky ? fixedClassName : navClassName}>
         {fancy ? (
           <div className="container">
-            <div className="flex-row bg-white navbar-collapse-wrapper d-flex flex-nowrap w-100 justify-content-between align-items-center">
+            <div className="flex-row bg-white navbar-collapse-wrapper d-flex flex-nowrap w-100 justify-content-between align-items-center ">
               {headerContent}
             </div>
           </div>
         ) : (
-          <div className="container flex-lg-row flex-nowrap align-items-center">{headerContent}</div>
+          <div className="container flex-lg-row flex-nowrap align-items-center "style={{ paddingTop: '15px', paddingBottom: '15px' }}>
+         {headerContent}</div>
         )}
       </nav>
 
