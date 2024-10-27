@@ -156,7 +156,7 @@ const Navbar: FC<NavbarProps> = (props) => {
             </div>
           </div>
         ) : (
-          <div className="container flex-lg-row flex-nowrap align-items-center">{headerContent}</div>
+          <div className="container flex-lg-row flex-nowrap align-items-center" style={{ paddingTop: '15px', paddingBottom: '15px' }}>{headerContent}</div>
         )}
       </nav>
 

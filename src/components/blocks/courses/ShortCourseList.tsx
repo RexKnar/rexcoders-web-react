@@ -12,12 +12,12 @@ function  ShortCourseList ({courseList}:any){
 
   return (
     <section className="wrapper bg-soft-aqua">
-      <div className="overflow-hidden ">
-        <div className="container py-10 py-md-12">
+  
+        <div className="container">
           <div className=" row">
             <div className="mx-auto text-center col-lg-12 col-xl-12 col-xxl-12">
-            <h2 className="mb-3 fs-15 text-uppercase text-muted">Our Popular Courses</h2>
-            <h3 className="display-3 ls-sm mb-9 px-xl-0">
+            <h2 className="mb-3 fs-15 text-uppercase text-muted pt-5">Our Popular Courses</h2>
+            <h3 className="display-3 ls-sm mb-9 ">
             Our courses are <span className="underline-3 style-2 yellow">tailored</span> for individuals passionate about tech, regardless of their <span className="underline-3 style-2 green">educational background.</span>
        
             </h3>
@@ -68,7 +68,7 @@ function  ShortCourseList ({courseList}:any){
             </Carousel>
           </div>
         </div>
-      </div>
+     
     </section>
   );
 };
