@@ -12,7 +12,7 @@ import { ShortCourseList } from 'components/blocks/courses';
 import { LazyMotion } from 'framer-motion';
 import { useGetCourseListQuery } from 'hooks/queries/training/useGetCourseListQuery';
 import { useEffect, useState } from 'react';
-import Mission from 'components/blocks/services/Mission';
+
 
 const Home: NextPage = () => {
 const [courseList, setCourseList]=useState<any[]>([]);
@@ -36,7 +36,6 @@ const [courseList, setCourseList]=useState<any[]>([]);
       <main className="content-wrapper">
         <div className="container-fluid">
           <Hero />
-          <Mission />
           <TrainingModules />
           <ShortCourseList courseList={courseList}/>
           <CareerSupport />

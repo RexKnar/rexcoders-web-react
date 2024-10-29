@@ -37,37 +37,38 @@ export const trainingFeaturesList = [
     id: 1,
     link: '#',
     icon: Browser,
-    title: '1:1 Mentoring ', 
+    title: 'Launch Your Skills ', 
     linkText: 'Learn More',
     linkType: LinkType.yellow,
-    description: `Unlock your full potential with dedicated 1:1 mentoring, providing personalized guidance and support tailored to your individual needs. `
+    description: `Create your own Space Online with simple clicks. Whether it's a sleek portfolio or a website, you can conquer it with your simple clicks. Are you ready to blast off into the Digital world - Click Awaits `
   },
   {
     id: 2,
     link: '#',
     icon: TeamTwo,
-    title: 'Private community',
+    title: 'Explore New Worlds',
     linkText: 'Learn More',
     linkType: LinkType.red,
-    description: `You'll have the chance to connect, collaborate, and learn from fellow students, alumni, mentors, and industry professionals.`
+    description: `Ever wondered how platforms like Instagram or Facebook update instantly when you post? Learn how to build your own dynamic features, and see the magic behind responsive apps.`
   },
   {
     id: 3,
     link: '#',
     icon: ClockThree,
     linkType: LinkType.green,
-    title: 'Flexible timing',
+    title: 'Tap into React’s Capabilities',
     linkText: 'Learn More',
-    description: `Empower your learning journey with flexible scheduling options, allowing you to balance your education with your busy lifestyle effortlessly.`
+    description: `Unlock React's full potential to create highly interactive user interfaces that fuels responsive web apps
+`
   },
   {
     id: 4,
     link: '#',
     icon: ChatTwo,
     linkType: LinkType.blue,
-    title: 'Live doubt support',
+    title: 'Join the Community',
     linkText: 'Learn More',
-    description: `You will be allocated with a dedicated mentor by your side to clear your doubts, guide you throughout, and ensure you get the most out of the programme. `
+    description: `Connect with fellow developers of all levels in a vibrant React community. Engage with professionals and peers and expand your network as you advance in front-end development. `
   }
 ];
 
