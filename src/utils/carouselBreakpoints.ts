@@ -1,7 +1,7 @@
 const carouselBreakpoints = {
-  0: { slidesPerView: 2 },
+  0: { slidesPerView: 1 },
   768: { slidesPerView: 3 },
-  1200: { slidesPerView: 6 }
+  1200: { slidesPerView: 3 }
 };
 
 export default carouselBreakpoints;

@@ -5,20 +5,21 @@ const accordions = [
   {
     no: 'One',
     expand: true,
-    heading: 'Professional Design',
-    body: 'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.'
+    heading: 'Launch Your Skills',
+    body: "Create your own Space Online with simple clicks. Whether it's a sleek portfolio or a website, you can conquer it with your simple clicks. Are you ready to blast off into the Digital world - Click Awaits"
   },
   {
     no: 'Two',
     expand: false,
-    heading: 'Top-Notch Support',
-    body: 'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.'
+    heading: 'Explore New Worlds',
+    body: "Ever wondered how platforms like Instagram or Facebook update instantly when you post? Learn how to build your own dynamic features, and see the magic behind responsive apps"
+
   },
   {
     no: 'Three',
     expand: false,
-    heading: 'Header and Slider Options',
-    body: 'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel.'
+    heading: 'Tap into React’s Capabilities',
+    body: "Unlock React's full potential to create highly interactive user interfaces that fuels responsive web apps"
   }
 ];
 
@@ -31,5 +32,6 @@ const AccordionList: FC = () => {
     </div>
   );
 };
+
 
 export default AccordionList;

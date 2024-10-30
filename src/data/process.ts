@@ -157,19 +157,19 @@ export const processList7 = [
   {
     id: 1,
     Icon: LightBulb,
-    title: 'Collect Ideas',
+    title: 'Live Coding Experience',
     description: 'Nulla vitae elit libero pharetra augue dapibus.'
   },
   {
     id: 2,
     Icon: PieChartTwo,
-    title: 'Data Analysis',
+    title: 'Engaging and Interactive',
     description: 'Vivamus sagittis lacus augue laoreet vel.'
   },
   {
     id: 3,
     Icon: Design,
-    title: 'Magic Touch',
+    title: 'Community Networking',
     description: 'Cras mattis consectetur purus sit amet.'
   }
 ];
