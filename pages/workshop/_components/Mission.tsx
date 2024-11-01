@@ -8,7 +8,7 @@ const Mission: FC = () => {
     <div className="row gx-lg-8 gx-xl-12 gy-10 mb-lg-22 mb-xl-24 align-items-center">
 
       <div className="col-lg-5">
-        <h2 className="fs-16 text-uppercase text-muted mb-3">Why Choose Us?</h2>
+        <h2 className="fs-16 text-uppercase text-muted mb-3">Your Features</h2>
         <h3 className="display-4 mb-7">Your Cosmic Mission</h3>
 
         <AccordionList />
@@ -30,3 +30,4 @@ const Mission: FC = () => {
 };
 
 export default Mission;
+

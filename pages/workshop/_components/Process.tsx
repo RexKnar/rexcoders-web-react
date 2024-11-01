@@ -14,7 +14,7 @@ const Process: FC = () => {
       </div>
 
       <div className="col-lg-5">
-      <h2 className="fs-16 text-uppercase text-muted mb-3">Why Attend?</h2>
+      <h2 className="fs-16 text-uppercase text-muted mb-3">Your Benefits</h2>
         <h3 className="display-5 mb-7 pe-xxl-5">Why Attend?</h3>
 
         {processList7.map(({ id, title, description, Icon }, i) => {

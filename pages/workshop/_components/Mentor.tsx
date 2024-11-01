@@ -23,14 +23,14 @@ const Mentor: FC = () => {
         </div>
       </div>
       <div className="col-lg-4">
-        <h2 className="fs-15 text-uppercase text-muted mb-3">Meet the Team</h2>
-        <h3 className="display-5 mb-5">Save your time and money by choosing our professional team.</h3>
+        <h2 className="fs-15 text-uppercase text-muted mb-3">Meet Your  Commanders</h2>
+        <h3 className="display-5 mb-5">Empowering You with Leaders Who Shape Success Beyond Tech.</h3>
         <p>
-          Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros
-          tempus porttitor.
+        Don’t wait—register now to secure your place in this cosmic adventure!
+
         </p>
 
-        <NextLink title="See All Members" href="#" className="btn btn-primary rounded-pill mt-3" />
+        <NextLink title="Start Your Journey" href="#" className="btn btn-primary rounded-pill mt-3" />
       </div>
 
     </div>

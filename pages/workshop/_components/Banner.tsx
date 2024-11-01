@@ -15,7 +15,7 @@ const Banner: FC = () => {
                                 </h3>
                                 <p className="mb-6 mb-lg-0 pe-lg-20 pe-xl-22 pe-xxl-25 text-white">Simply register, and you’ll become part of our thriving React community! Connect with developers at all levels to expand your network. We will- support, provide resources, and mentorship to help you grow in front end development.</p>
                                 </div>
-                                <a className="btn btn-primary rounded-pill mb-0 text-nowrap" href="demo-1#">Try It For Free</a>
+                                <a className="btn btn-primary rounded-pill mb-0 text-nowrap" href="demo-1#">Join us</a>
                             </div>
                         </div>
                     </section>

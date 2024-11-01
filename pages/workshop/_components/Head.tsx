@@ -17,7 +17,7 @@ const Head: FC = () => {
                                                 style={{animation-name:slideInDown;animation-delay:900ms;animation-fill-mode:both;animation-duration:700ms;animation-direction:normal;animation-timing-function:ease}}">
                                 Step into the future of front-end development! Join our stellar React workshop and explore the vast potential of React101. Get hands-on with the front-end library behind the world’s most dynamic web applications, and elevate your coding skills to cosmic levels.</p>
                                 <div className="row gx-2 align-items-center"> {/* Use align-items-center to vertically center */}
-    <div className="col-auto"> {/* Use col-auto to fit the content */}
+    <div className="col-auto pb-3"> {/* Use col-auto to fit the content */}
         <i className="uil display-4 uil-calendar-alt"></i>
     </div>
     <div className="col"> {/* Remaining space for the heading */}
@@ -26,17 +26,19 @@ const Head: FC = () => {
     </div>
 </div>
                     </div>
-                    <div className="col-lg-4 offset-lg-1 mb-n18" data-cues="slideInDown">
+                    <div className="col-lg-5  mb-n18" data-cues="slideInDown">
                         <div className="position-relative
                                                 style={{animation-name:slideInDown;animation-delay:0ms;animation-fill-mode:both;animation-duration:700ms;animation-direction:normal;animation-timing-function:ease}}">
                         </div>
                         
                             <div className="card border-secondary">
-                                <div className="card-body">
+                                <div className="card-body px-1">
                                     <form className="contact-form needs-validation" method="post">
                                         <div className="messages"></div>
-                                        <div className="row gx-4">
-                                            <div className="form-floating mb-4">
+                                        <h1 className="display-2 text-center ">Start Your Journey</h1>
+                                        <div className="row gx-4 justify-content-center">
+                                        <div className="col-10">
+                                            <div className="form-floating mt-7 mb-6">
                                                 <input
                                                     required
                                                     type="text"
@@ -45,12 +47,15 @@ const Head: FC = () => {
                                                     placeholder="Jane"
                                                     className="form-control"
                                                 />
+                                           
                                                 <label htmlFor="form_name">Name *</label>
                                                 <div className="valid-feedback">Looks good!</div>
                                                 <div className="invalid-feedback">Please enter your first name.</div>
                                             </div>
+                                            </div>
 
-                                            <div className="form-floating mb-4">
+                                            <div className="col-10 ">
+                                            <div className="form-floating mb-6 ">
                                                 <input
                                                     required
                                                     type="email"
@@ -63,8 +68,10 @@ const Head: FC = () => {
                                                 <div className="valid-feedback">Looks good!</div>
                                                 <div className="invalid-feedback">Please provide a valid email address.</div>
                                             </div>
+                                            </div>
 
-                                            <div className="form-floating mb-4">
+                                            <div className="col-10">
+                                            <div className="form-floating mb-7">
                                                 <input
                                                     required
                                                     type="tel"
@@ -77,12 +84,13 @@ const Head: FC = () => {
                                                 <div className="valid-feedback">Looks good!</div>
                                                 <div className="invalid-feedback">Please provide a valid phone number.</div>
                                             </div>
+                                            </div>
 
                                             <div className="col-12 text-center">
                                                 <input
                                                     type="submit"
                                                     className="btn btn-primary rounded-pill btn-send mb-3"
-                                                    value="Register"
+                                                    value="Register Now !"
                                                 />
                                                 {/* <p className="text-muted"><strong>*</strong> These fields are required.</p> */}
                                             </div>
