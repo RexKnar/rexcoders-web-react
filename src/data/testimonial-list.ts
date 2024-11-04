@@ -195,3 +195,54 @@ export const testimonialList7 = [
     review: `Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio.`
   }
 ];
+
+export const testimonialList8 = [
+  {
+    id: 1,
+    name: 'Sheik Ali',
+    rating: 'five',
+    review: `I was looking out for the right place to build my skills in software developing to fulfill my long-standing desire`,
+    fullReview: `I was looking out for the right place to build my skills in software developing to fulfill my long-standing desire to shift my career from education industry to IT industry. Finally, I have found and joined Rexcoders Coding Academy. The way of training given in this academy was very unique. I got excellent learning experience from Rexcoders coding academy. The best parts of training I admired and enjoyed in the academy are individual care to each student, conducting weekly technical games, and weekend technical sessions. It is the right place to build your career towards IT.`,
+    image: '/img/avatars/te7.jpg'
+  },
+  {
+    id: 2,
+    name: 'Mafaz Malik',
+    rating: 'five',
+    review: `Rexcoders coding academy has knowledgeable and experienced instructors who can convey complex coding concepts `,
+    fullReview: `Rexcoders coding academy has knowledgeable and experienced instructors who can convey complex coding concepts in a way that is easy to understand. It is the place where I developed myself in every aspect. We can develop our skills in many ways, but I developed my skills such as communication, deliverance, and so on here. Individual training is the best part I liked personally. Now I have the confidence to develop a web application.`,
+    image: '/img/avatars/te7.jpg'
+  },
+  {
+    id: 3,
+    name: 'Aswin',
+    rating: 'five',
+    review: `Very good training academy. 1 to 1 teaching. Best academy for slow learner students, and for me, it is the best academy `,
+    fullReview: `Very good training academy. 1 to 1 teaching. Best academy for slow learner students, and for me, it is the best academy I have seen before. The instructors are patient and really focus on the individual needs of each student, making it a great environment for learning.`,
+    image: '/img/avatars/te7.jpg'
+  },
+  {
+    id: 4,
+    name: 'Sheik Ali',
+    rating: 'five',
+    review: `I was looking out for the right place to build my skills in software developing to fulfill my long-standing desire`,
+    fullReview: `I was looking out for the right place to build my skills in software developing to fulfill my long-standing desire to shift my career from education industry to IT industry. Finally, I have found and joined Rexcoders Coding Academy. The way of training given in this academy was very unique. I got excellent learning experience from Rexcoders coding academy. The best parts of training I admired and enjoyed in the academy are individual care to each student, conducting weekly technical games, and weekend technical sessions. It is the right place to build your career towards IT.`,
+    image: '/img/avatars/te7.jpg'
+  },
+  {
+    id: 5,
+    name: 'Mafaz Malik',
+    rating: 'five',
+    review: `Rexcoders coding academy has knowledgeable and experienced instructors who can convey complex coding concepts `,
+    fullReview: `Rexcoders coding academy has knowledgeable and experienced instructors who can convey complex coding concepts in a way that is easy to understand. It is the place where I developed myself in every aspect. We can develop our skills in many ways, but I developed my skills such as communication, deliverance, and so on here. Individual training is the best part I liked personally. Now I have the confidence to develop a web application.`,
+    image: '/img/avatars/te7.jpg'
+  },
+  {
+    id: 6,
+    name: 'Aswin',
+    rating: 'five',
+    review: `Very good training academy. 1 to 1 teaching. Best academy for slow learner students, and for me, it is the best academy `,
+    fullReview: `Very good training academy. 1 to 1 teaching. Best academy for slow learner students, and for me, it is the best academy I have seen before. The instructors are patient and really focus on the individual needs of each student, making it a great environment for learning.`,
+    image: '/img/avatars/te7.jpg'
+  }
+];

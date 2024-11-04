@@ -23,7 +23,7 @@ const details: NextPage = () => {
             <Testimonial />
             <Placement />
             <Faq />
-            <Banner />
+            {/* <Banner /> */}
             <Footer />
         </main>
     );

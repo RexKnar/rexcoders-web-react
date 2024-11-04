@@ -188,44 +188,25 @@ export const serviceList6 = [
     id: 1,
     Icon: Target,
     color: color.aqua,
-    title: 'Fitness Goal',
-    description: `Duis mollis gravida commodo id luctus erat porttitor ligula, eget lacinia odio sem aget elit nullam quis risus eget.`
+    title: 'Launch Your Skills',
+    description: `Create your own Space Online with simple clicks. Whether it's a sleek portfolio or a website, you can conquer it with your simple clicks. Are you ready to blast off into the Digital world - Click Awaits`
   },
   {
     id: 2,
     Icon: Medal,
     color: color.yellow,
-    title: 'Activity Tracking',
-    description: `Duis mollis gravida commodo id luctus erat porttitor ligula, eget lacinia odio sem aget elit nullam quis risus eget.`
+    title: 'Explore New Worlds',
+    description: `Ever wondered how platforms like Instagram or Facebook update instantly when you post? Learn how to build your own dynamic features, and see the magic behind responsive apps.`
   },
   {
     id: 3,
     Icon: ClockThree,
     color: color.red,
-    title: 'Sleep Analysis',
-    description: `Duis mollis gravida commodo id luctus erat porttitor ligula, eget lacinia odio sem aget elit nullam quis risus eget.`
-  },
-  {
-    id: 4,
-    Icon: Check,
-    color: color.pink,
-    title: 'Workout Report',
-    description: `Duis mollis gravida commodo id luctus erat porttitor ligula, eget lacinia odio sem aget elit nullam quis risus eget.`
-  },
-  {
-    id: 5,
-    Icon: ShopTwo,
-    color: color.green,
-    title: 'Nutritional Analysis',
-    description: `Duis mollis gravida commodo id luctus erat porttitor ligula, eget lacinia odio sem aget elit nullam quis risus eget.`
-  },
-  {
-    id: 6,
-    Icon: Team,
-    color: color.purple,
-    title: 'Activity Sharing',
-    description: `Duis mollis gravida commodo id luctus erat porttitor ligula, eget lacinia odio sem aget elit nullam quis risus eget.`
+    title: 'Tap into React’s Capabilities',
+    description: `Unlock React's full potential to create highly interactive user interfaces that fuels responsive web apps
+`
   }
+  
 ];
 
 // used in the services-9 block

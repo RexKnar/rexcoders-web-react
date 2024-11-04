@@ -1,33 +1,29 @@
-import { FC } from 'react';
-import AccordionList from 'components/common/AccordionList';
+import { FC, Fragment } from 'react';
+import { ServiceCard3 } from 'components/reuseable/service-cards';
+// -------- data -------- //
+import { serviceList6 } from 'data/service';
 
 const Mission: FC = () => {
   return (
-    <section id="snippet-1" className="wrapper bg-light">
-      <div className="container pt-10 pt-md-17 pb-13 pb-md-17 mb-lg-n22 mb-xl-n24">
-        <div className="row gx-lg-8 gx-xl-12 gy-10 mb-lg-22 mb-xl-24 align-items-center">
-
-          <div className="col-lg-5">
-            <h2 className="fs-16 text-uppercase text-muted mb-3">Your Features</h2>
-            <h3 className="display-4 mb-7">Your Cosmic Mission</h3>
-
-            <AccordionList />
-          </div>
-          <div className="col-lg-7">
-            <figure>
-              <img
-                alt="choose us"
-                className="w-auto"
-                src="/img/illustrations/i6.png"
-                srcSet="/img/illustrations/i6@2x.png 2x"
-              />
-            </figure>
-          </div>
+    <Fragment>
+      <div className="row text-center mt-xl-12">
+        <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 ">
+          {/* <h2 className="fs-15 text-uppercase text-muted mb-3">App Features</h2> */}
+          <h3 className="display-4 mb-9 px-xxl-11 ">
+          Your Cosmic Mission
+          </h3>
         </div>
       </div>
-    </section>
+
+      <div className="row gx-lg-8 gx-xl-12 gy-8 mb-14 mb-md-17 mb-lg-13 px-lg-10">
+        {serviceList6.map(({ Icon, color, ...item }) => (
+          <div className="col-md-6 col-lg-4" key={item.id}>
+            <ServiceCard3 {...item} Icon={<Icon className={`icon-svg-sm text-${color} me-4`} />} />
+          </div>
+        ))}
+      </div>
+    </Fragment>
   );
 };
 
 export default Mission;
-

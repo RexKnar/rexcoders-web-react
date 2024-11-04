@@ -13,7 +13,7 @@ const Footer: FC = () => {
   ];
   return (
     <footer className="bg-navy text-inverse">
-      <div className="container  pb-13 pb-md-15">
+      <div className="container pt-lg-10  pb-13 pb-md-15">
         <div className="row gy-6 gy-lg-0">
           <div className="col-md-4 col-lg-3">
             <div className="widget">
