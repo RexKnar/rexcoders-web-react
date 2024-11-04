@@ -42,6 +42,7 @@ const Testimonial: FC = () => {
               <div className="swiper">
                 <Carousel grabCursor navigation={false} breakpoints={carouselBreakpoints}>
                   {testimonialList.map(({ id, name, rating, review, fullReview }) => {
+                    // eslint-disable-next-line react-hooks/rules-of-hooks
                     const [isExpanded, setIsExpanded] = useState(false);
 
                     return (
@@ -53,12 +54,12 @@ const Testimonial: FC = () => {
                               <blockquote className="mb-0 border-0 fs-lg">
                                 <p>
                                   “{isExpanded ? fullReview : review}<span
-                                  onClick={() => setIsExpanded(!isExpanded)}
-                                  className="btn-link"
-                                  style={{ cursor: 'pointer' }}
-                                >
-                                  {isExpanded ? '' : '...'}
-                                </span>”
+                                    onClick={() => setIsExpanded(!isExpanded)}
+                                    className="btn-link"
+                                    style={{ cursor: 'pointer' }}
+                                  >
+                                    {isExpanded ? '' : '...'}
+                                  </span>”
                                 </p>
                                 <span
                                   onClick={() => setIsExpanded(!isExpanded)}

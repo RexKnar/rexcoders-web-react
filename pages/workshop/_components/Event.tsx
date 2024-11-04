@@ -2,7 +2,7 @@ import { FC } from "react";
 import Swiper from "swiper";
 
 const Event: FC = () => {
-   
+
 
     return (
         <>
@@ -223,7 +223,7 @@ const Event: FC = () => {
                     </section>
                 </div>
 
-          </section>
+            </section>
         </>
     );
 };

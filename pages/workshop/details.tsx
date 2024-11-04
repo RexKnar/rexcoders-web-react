@@ -15,16 +15,16 @@ import Footer from "./_components/Footer";
 const details: NextPage = () => {
     return (
         <main className="content-wrapper">
-            <Head/>
-           <Process/>
-            <Mission/>
+            <Head />
+            <Process />
+            <Mission />
             {/* <Event/> */}
             {/* <Mentor/> */}
             <Testimonial />
-            <Placement/>
+            <Placement />
             <Faq />
-            <Banner/>
-            <Footer/>
+            <Banner />
+            <Footer />
         </main>
     );
 
