@@ -4,7 +4,7 @@ import Accordion from 'components/reuseable/accordion';
 const accordions = [
   {
     no: 'One',
-    expand: true,
+    expand: false,
     heading: 'Launch Your Skills',
     body: "Create your own Space Online with simple clicks. Whether it's a sleek portfolio or a website, you can conquer it with your simple clicks. Are you ready to blast off into the Digital world - Click Awaits"
   },

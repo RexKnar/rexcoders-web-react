@@ -15,7 +15,7 @@ const Placement: FC = () => {
           </div>
 
           <div className="col-lg-8">
-            <div className="row row-cols-2 row-cols-md-4 gx-0 gx-md-8 gx-xl-12 gy-12">
+            <div className="row row-cols-2 row-cols-md-4 gx-0 gx-md-8 gx-xl-12 gy-12 align-item-center">
               {clientList2.map((item) => (
                 <div className="col" key={item}>
                   <FigureImage width={450} height={301} src={item} className="px-3 px-md-0 px-xxl-2" />

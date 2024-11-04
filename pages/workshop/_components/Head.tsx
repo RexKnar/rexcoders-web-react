@@ -5,16 +5,16 @@ const Head: FC = () => {
     return (
         <>
             <section className="wrapper bg-soft-primary angled lower-start">
-                <div className="container pt-7 pt-md-18 pb-8">
+                <div className="container pt-17  pt-md-18 pb-8">
                     <div className="row gx-0 gy-10 align-items-center">
-                        <div className="col-lg-7">
+                        <div className="col-lg-7 col-md-12">
                             <h1 className="display-1 text-black mb-4
                                                 style={{animation-name:slideInDown;animation-delay:600ms;animation-fill-mode:both;animation-duration:700ms;animation-direction:normal;animation-timing-function:ease}}">
-                                Embark on a Cosmic Journey  <br /><span className="text-primary text-nowrap">
+                                Embark on a Cosmic Journey  <br /><span className="text-primary text-wrap">
                                     <div className="Typewriter typewriter-wrapper">Through the React Universe</div>
                                 </span></h1>
-                            <p className="lead lh-sm text-black mb-7 pe-md-18 pe-lg-0 pe-xxl-15
-                                                style={{animation-name:slideInDown;animation-delay:900ms;animation-fill-mode:both;animation-duration:700ms;animation-direction:normal;animation-timing-function:ease}}">
+                            <p className="lead lh-sm text-black mb-7  pe-lg-0 pe-xxl-15
+                                                style={{animation-name:slideInDown;animation-delay:900ms;animation-fill-mode:both;animation-duration:700ms;animation-direction:normal;animation-timing-function:ease}} text-justify">
                                 Step into the future of front-end development! Join our stellar React workshop and explore the vast potential of React101. Get hands-on with the front-end library behind the world’s most dynamic web applications, and elevate your coding skills to cosmic levels.</p>
                                 <div className="row gx-2 align-items-center"> {/* Use align-items-center to vertically center */}
     <div className="col-auto pb-3"> {/* Use col-auto to fit the content */}

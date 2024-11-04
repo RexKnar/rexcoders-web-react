@@ -46,27 +46,35 @@ const Testimonial: FC = () => {
 
                     return (
                       <div className="swiper-slide w-auto" key={id}>
-                        <div className="item-inner w-25">
-                          <div className="card">
+                        <div className="item-inner w-auto col-12 col-sm-6 col-md-4">
+                          <div className="card ">
                             <div className="card-body">
                               <span className={`ratings ${rating} mb-3`}></span>
                               <blockquote className="mb-0 border-0 fs-lg">
-                                <p>“{isExpanded ? fullReview : review}<span
-                            onClick={() => setIsExpanded(!isExpanded)}
-                            className="btn-link" // Optionally, you can remove this class if you want it to be plain text
-                            style={{ cursor: 'pointer' }}
-                          >
-                            {isExpanded ? '^' : '...'}
-                          </span>”</p>
-                                
+                                <p>
+                                  “{isExpanded ? fullReview : review}<span
+                                  onClick={() => setIsExpanded(!isExpanded)}
+                                  className="btn-link"
+                                  style={{ cursor: 'pointer' }}
+                                >
+                                  {isExpanded ? '' : '...'}
+                                </span>”
+                                </p>
+                                <span
+                                  onClick={() => setIsExpanded(!isExpanded)}
+                                  className="btn-link"
+                                  style={{ cursor: 'pointer' }}
+                                >
+                                  {isExpanded ? 'show less' : ''}
+                                </span>
                                 <div className="blockquote-details">
                                   <div className="info">
-                                    <p>- {name}</p> {/* Adjust title as needed */}
-                                    
+                                    <p>- {name}</p>
                                   </div>
                                 </div>
                               </blockquote>
                             </div>
+
                           </div>
                         </div>
                       </div>
@@ -80,9 +88,9 @@ const Testimonial: FC = () => {
             </div>
           </div>
         </div>
-    
 
-    </section >
+
+      </section >
 
     </>
   );

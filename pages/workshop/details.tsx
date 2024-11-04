@@ -19,7 +19,7 @@ const details: NextPage = () => {
            <Process/>
             <Mission/>
             {/* <Event/> */}
-            <Mentor/>
+            {/* <Mentor/> */}
             <Testimonial />
             <Placement/>
             <Faq />
