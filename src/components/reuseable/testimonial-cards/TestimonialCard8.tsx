@@ -23,7 +23,7 @@ const TestimonialCard8: FC<Testimonial8CardProps> = ({ name, rating, review, ful
                 <div className="card-body">
                     <span className={`ratings ${rating} mb-3`}></span>
                     <blockquote className="icon mb-0">
-                        <p className="review-text">"
+                        <p className="review-text"style={{textAlign:'justify'}}>"
                             {isExpanded ? fullReview : review}
                             <span
                                 onClick={toggleReviewText}

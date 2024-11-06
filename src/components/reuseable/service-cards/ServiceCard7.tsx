@@ -5,19 +5,19 @@ type ServiceCard3Props = {
   title: string;
   Icon: JSX.Element;
   className?: string;
-  description: string;
+  color?: string;
 };
 // ================================================
 
 const ServiceCard3: FC<ServiceCard3Props> = (props) => {
-  const { title, description, Icon, className = 'd-flex flex-row' } = props;
+  const { title, Icon, className = 'd-flex flex-row' } = props;
   return (
     <div className={className}>
       <div>{Icon}</div>
 
       <div>
         <h4 className="mb-1">{title}</h4>
-        <p className="mb-0" style={{textAlign:'justify'}}>{description}</p>
+    
       </div>
     </div>
   );

@@ -187,21 +187,21 @@ export const serviceList6 = [
   {
     id: 1,
     Icon: Target,
-    color: color.aqua,
+    color: color.green,
     title: 'Launch Your Skills',
     description: `Create your own Space Online with simple clicks. Whether it's a sleek portfolio or a website, you can conquer it with your simple clicks. Are you ready to blast off into the Digital world - Click Awaits`
   },
   {
     id: 2,
-    Icon: Medal,
-    color: color.yellow,
+    Icon: Earth,
+    color: color.green,
     title: 'Explore New Worlds',
     description: `Ever wondered how platforms like Instagram or Facebook update instantly when you post? Learn how to build your own dynamic features, and see the magic behind responsive apps.`
   },
   {
     id: 3,
-    Icon: ClockThree,
-    color: color.red,
+    Icon: Search,
+    color: color.green,
     title: 'Tap into React’s Capabilities',
     description: `Unlock React's full potential to create highly interactive user interfaces that fuels responsive web apps
 `

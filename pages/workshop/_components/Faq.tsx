@@ -13,9 +13,8 @@ const Faq: FC<Faq2Props> = ({ titleColor = 'primary' }) => {
       <div className="container py-14 py-md-16">
         <div className="row">
           <div className="col-lg-6 col-xxl-10 mx-auto text-center">
-            <h2 className={`fs-15 text-uppercase text-${titleColor} mb-3`}>FAQ</h2>
             <h3 className="display-4 mb-10 px-lg-12 px-xl-10 px-xxl-15">
-              If you don't see an answer to your question, you can send us an email from our contact form.
+             Frequently Asked Questions
             </h3>
           </div>
         </div>

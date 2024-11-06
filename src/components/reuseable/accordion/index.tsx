@@ -34,7 +34,7 @@ const Accordion: FC<AccordionProps> = (props) => {
         className={`accordion-collapse collapse ${expand && 'show'}`}
       >
         <div className="card-body">
-          <p>{body}</p>
+          <p style={{textAlign:'justify'}}>{body}</p>
         </div>
       </div>
     </div>

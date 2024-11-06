@@ -11,6 +11,7 @@ import DeliveryBox from 'icons/solid-mono/DeliveryBox';
 import PieChartTwo from 'icons/lineal/PieChartTwo';
 import SmartphoneTwo from 'icons/lineal/SmartphoneTwo';
 import CloudComputing from 'icons/lineal/CloudComputing';
+import color from 'utils/color';
 
 // used in the process-1, process-7, process-14 block
 export const processList1 = [
@@ -157,18 +158,21 @@ export const processList7 = [
   {
     id: 1,
     Icon: LightBulb,
+    color: color.green,
     title: 'Live Coding Experience',
     description: 'Nulla vitae elit libero pharetra augue dapibus.'
   },
   {
     id: 2,
     Icon: PieChartTwo,
+    color: color.green,
     title: 'Engaging and Interactive',
     description: 'Vivamus sagittis lacus augue laoreet vel.'
   },
   {
     id: 3,
     Icon: Design,
+    color: color.green,
     title: 'Community Networking',
     description: 'Cras mattis consectetur purus sit amet.'
   }
