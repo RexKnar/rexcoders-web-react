@@ -1,3 +1,4 @@
+import RegisterForm from "components/elements/forms/RegisterForm";
 import { FC } from "react";
 
 const Head: FC = () => {
@@ -32,70 +33,8 @@ const Head: FC = () => {
                             </div>
 
                             <div className="card border-secondary">
-                                <div className="card-body px-1">
-                                    <form className="contact-form needs-validation" method="post">
-                                        <div className="messages"></div>
-                                        <h1 className="display-2 text-center ">Start Your Journey</h1>
-                                        <div className="row gx-4 justify-content-center">
-                                            <div className="col-10">
-                                                <div className="form-floating mt-7 mb-6">
-                                                    <input
-                                                        required
-                                                        type="text"
-                                                        name="name"
-                                                        id="form_name"
-                                                        placeholder="Jane"
-                                                        className="form-control"
-                                                    />
-
-                                                    <label htmlFor="form_name">Name *</label>
-                                                    <div className="valid-feedback">Looks good!</div>
-                                                    <div className="invalid-feedback">Please enter your first name.</div>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-10 ">
-                                                <div className="form-floating mb-6 ">
-                                                    <input
-                                                        required
-                                                        type="email"
-                                                        name="email"
-                                                        id="form_email"
-                                                        className="form-control"
-                                                        placeholder="jane.doe@example.com"
-                                                    />
-                                                    <label htmlFor="form_email">Email *</label>
-                                                    <div className="valid-feedback">Looks good!</div>
-                                                    <div className="invalid-feedback">Please provide a valid email address.</div>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-10">
-                                                <div className="form-floating mb-7">
-                                                    <input
-                                                        required
-                                                        type="tel"
-                                                        name="phone"
-                                                        id="form_phone"
-                                                        className="form-control"
-                                                        placeholder="123-456-7890"
-                                                    />
-                                                    <label htmlFor="form_phone">Contact *</label>
-                                                    <div className="valid-feedback">Looks good!</div>
-                                                    <div className="invalid-feedback">Please provide a valid phone number.</div>
-                                                </div>
-                                            </div>
-
-                                            <div className="col-12 text-center">
-                                                <input
-                                                    type="submit"
-                                                    className="btn btn-primary rounded-pill btn-send mb-3"
-                                                    value="Register Now !"
-                                                />
-
-                                            </div>
-                                        </div>
-                                    </form>
+                                <div className="card-body px-8">
+                                    <RegisterForm />
                                 </div>
                             </div>
                         </div>

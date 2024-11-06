@@ -3,19 +3,19 @@ import { FC } from 'react';
 import { processList7 } from 'data/process';
 
 const Process: FC = () => {
-  return (
-    <section id="snippet-12" className="wrapper bg-light wrapper-border">
-    <div className="container pt-15 pt-md-17 pt-lg-20 pb-lg-7 pb-13 pb-md-15">
-        <div className="row">
-            <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
-                <h3 className="display-4 mb-10 px-xl-10 px-xxl-15">What Makes This Workshop Unique?</h3>
-            </div>
-        </div>
-        <ul role="tablist"
-            className="nav nav-tabs nav-tabs-bg nav-tabs-shadow-lg d-flex justify-content-between nav-justified flex-lg-row flex-column">
-            <li className="nav-item" role="presentation"><a role="tab" href="#tab2-1" data-bs-toggle="tab"
-                    aria-selected="true" className="nav-link d-flex flex-row active">
-                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294.2 409.6"
+    return (
+        <section id="snippet-12" className="wrapper bg-light ">
+            <div className="container pt-15 pt-md-17 pt-lg-20 pb-lg-2 pb-13 pb-md-15">
+                <div className="row">
+                    <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
+                        <h3 className="display-4 mb-10 px-xxl-15">What Makes This Workshop Unique?</h3>
+                    </div>
+                </div>
+                <ul role="tablist"
+                    className="nav nav-tabs nav-tabs-bg nav-tabs-shadow-lg d-flex justify-content-between nav-justified flex-lg-row flex-column">
+                    <li className="nav-item" role="presentation"><a role="tab" href="#tab2-1" data-bs-toggle="tab"
+                        aria-selected="true" className="nav-link d-flex flex-row active">
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294.2 409.6"
                             className="svg-inject icon-svg icon-svg-md text-yellow me-4">
                             <path className="lineal-stroke"
                                 d="M31.2 342.9c-2.4 1.7-5.8 1.1-7.5-1.3-.6-.9-1-2-1-3.1v-77.1l68.9-77.2V150L5 247.1c-3.2 3.6-5 8.2-5 13v78.4c0 15.5 12.6 28.1 28.1 28.1 5.8 0 11.5-1.8 16.2-5.1l9.6-6.8-13.1-18.6-9.6 6.8zm258.1-95.8L200.7 148v34.2l70.8 79.3v77.1c0 3-2.4 5.4-5.4 5.4-1.1 0-2.2-.3-3.1-1l-9.6-6.7-13.1 18.6 9.6 6.7c12.7 8.9 30.3 5.9 39.2-6.9 3.3-4.7 5.1-10.4 5.1-16.1v-78.4c0-4.8-1.8-9.5-4.9-13.1zM147.1 409.6l-6.1-3.9c-2-1.3-49.3-32-49.3-72.5 0-40 23.3-72.6 53.1-74.2.8 0 1.6-.1 2.3-.1 4.1 0 8.1.6 12.1 1.7 9.1 2.7 17.6 8.4 24.6 16.6 11.9 14 18.7 34.4 18.7 55.9 0 40.5-47.2 71.2-49.3 72.5l-6.1 4zm0-127.9h-1c-17.5.9-31.7 24-31.7 51.5 0 19.6 19.9 39.1 32.6 48.9 12.7-9.8 32.6-29.3 32.6-48.9 0-16.2-4.9-31.2-13.3-41.1-4.1-4.8-8.8-8.1-13.6-9.5-1.8-.6-3.7-.9-5.6-.9z">
@@ -30,13 +30,13 @@ const Process: FC = () => {
                                 d="M89.5 321.8h115.2c9-47.9 27.4-149.1 27.4-167 0-63-69.5-123.9-85-131.5-6.7 3.3-26.8 18.4-46.8 43.2-24.6 30.4-38.2 61.8-38.2 88.4 0 17.9 18.4 119.1 27.4 166.9zm134.1 22.8H70.7l-1.8-9.3c-3-15.9-29.5-155.7-29.5-180.6 0-42.2 25-80.9 45.9-106C101.1 29.9 131.8 0 147.1 0c15 0 45.7 29.8 61.5 48.6 21.1 25.1 46.2 63.8 46.2 106.2 0 24.9-26.5 164.7-29.5 180.6l-1.7 9.2z">
                             </path>
                         </svg></div>
-                    <div>
-                        <h4 className="mb-1">Live Coding Experience</h4>
-                    </div>
-                </a></li>
-            <li className="nav-item" role="presentation"><a role="tab"  href="#tab2-2"
-                    data-bs-toggle="tab" aria-selected="false" className="nav-link d-flex flex-row">
-                    <div><svg viewBox="0 0 512 465.5" xmlns="http://www.w3.org/2000/svg"
+                        <div>
+                            <h4 className="mb-1">Live Coding Experience</h4>
+                        </div>
+                    </a></li>
+                    <li className="nav-item" role="presentation"><a role="tab" href="#tab2-2"
+                        data-bs-toggle="tab" aria-selected="false" className="nav-link d-flex flex-row">
+                        <div><svg viewBox="0 0 512 465.5" xmlns="http://www.w3.org/2000/svg"
                             className="svg-inject icon-svg icon-svg-md text-green me-4">
                             <path className="lineal-stroke"
                                 d="M156.8 465.5c-9.9 0-24.2-4.8-56.2-40.6-16.2-18.2-29.5-36-30.1-36.8-.4-.5-.7-1-1-1.6-6.1-11-9.3-23.3-9.3-35.8v-90.9c0-7.9 6.4-14.4 14.3-14.4h116c16.5 0 32.4 6.5 44.2 18.1l59.4 58.5c17.2 17.2 17.3 45.1.1 62.3s-45.1 17.3-62.3.1L172.7 325c-5.9 0-15.5-.1-23.1-.1l-10.8-.1c-7.9 0-14.3-6.5-14.3-14.4s6.5-14.3 14.4-14.3h.1l10.8.1c6.8 0 14.1.1 19.6.1h6.9c4.2 0 8.5.1 12.7 4.3l63.5 63.5c6 6 15.7 6 21.7 0s6-15.7 0-21.7L214.6 284c-6.4-6.3-15-9.9-24-9.8H88.9v76.5c0 7.4 1.8 14.6 5.2 21.1 2.6 3.5 13.6 17.9 26.5 32.4 25.5 28.8 35.2 32.2 36.5 32.6h155.1c10.6 0 22.9-5.5 34.6-11.2 9.9-4.8 83.3-54.6 127.3-84.9l.7-.5c8.2-5.1 10.7-15.8 5.6-23.9-4.9-7.9-15.2-10.5-23.3-6L350 381.4c-6.6 4.4-15.5 2.6-19.9-4-4.4-6.6-2.6-15.5 4-19.9l107.5-71.3c.2-.1.3-.2.5-.3 21.8-13.1 50.1-6 63.2 15.8 12.9 21.6 6.2 49.6-15.2 62.8-13.3 9.2-115.8 79.6-130.8 86.9-14.7 7.1-30.5 14.1-47.1 14.1H156.8z">
@@ -53,13 +53,13 @@ const Process: FC = () => {
                                 d="M345.4 224.9c-15.5-.5-28.2-8.5-28.2-16.8 0-4.4 3.9-10.9 8.8-10.9 5.4 0 9.8 7.6 19.4 9.3v-20.9c-11.9-4.5-25.9-10.1-25.9-26.6s12.1-24.3 25.9-26.2v-3.6c0-1.8 2.1-3.5 4.9-3.5 2.5 0 4.9 1.7 4.9 3.5v3.2c8 .3 23.1 2.3 23.1 11.2 0 3.5-2.3 10.6-8 10.6-4.3 0-6.7-4.1-15.1-4.8v18.9c11.8 4.4 25.5 10.5 25.5 27.9 0 16-10.4 25.7-25.5 28.2v3.8c0 1.8-2.5 3.5-4.9 3.5-2.9 0-4.9-1.7-4.9-3.5v-3.3zm1.3-59.7v-15.4c-5.8 1.2-8.3 4.1-8.3 7.2 0 3.8 3.4 6.1 8.3 8.2zm7.2 23.9v17.3c4.4-1 7.9-3.5 7.9-8.1 0-4.3-3.2-7-7.9-9.2z">
                             </path>
                         </svg></div>
-                    <div>
-                        <h4 className="mb-1">Engaging and Interactive</h4>
-                    </div>
-                </a></li>
-            <li className="nav-item" role="presentation"><a role="tab"  href="#tab2-3"
-                    data-bs-toggle="tab" aria-selected="false" className="nav-link d-flex flex-row">
-                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 339.8 409.6"
+                        <div>
+                            <h4 className="mb-1">Engaging and Interactive</h4>
+                        </div>
+                    </a></li>
+                    <li className="nav-item" role="presentation"><a role="tab" href="#tab2-3"
+                        data-bs-toggle="tab" aria-selected="false" className="nav-link d-flex flex-row">
+                        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 339.8 409.6"
                             className="svg-inject icon-svg icon-svg-md text-red me-4">
                             <path className="lineal-stroke"
                                 d="M169.9 409.6c-5.5 0-10.9-1.2-15.8-3.5C107.8 384.8 0 327.5 0 255.5V72.1c0-10.7 8.7-19.4 19.4-19.5 2.1 0 4.2.3 6.1 1 9.2 3.1 18.9 4.7 28.6 4.6 31.5.1 60.7-16.3 76.9-43.3C136.6 5.7 146.6 0 157.4 0h25c10.8.1 20.8 5.7 26.4 14.9 16.2 27 45.4 43.4 76.9 43.3 9.7 0 19.4-1.6 28.6-4.6 10.2-3.4 21.2 2.1 24.6 12.3.7 2 1 4.1 1 6.1v48c0 6.5-5.3 11.8-11.7 11.8-6.5 0-11.8-5.3-11.8-11.7V77.6c-10 2.8-20.3 4.2-30.6 4.2-39.7.2-76.5-20.6-97-54.6-1.3-2.2-3.7-3.6-6.3-3.6h-25c-2.6 0-5 1.4-6.3 3.6-20.5 34-57.3 54.8-97 54.6-10.3 0-20.6-1.4-30.6-4.2v178c0 47.7 72.5 98 140.4 129.3 3.8 1.7 8.2 1.7 12 0 67.9-31.3 140.4-81.6 140.4-129.3v-74.9c0-6.5 5.3-11.8 11.8-11.7 6.5 0 11.7 5.3 11.7 11.7v74.9c0 72-107.8 129.3-154.1 150.6-5 2.2-10.4 3.4-15.9 3.4z">
@@ -71,17 +71,17 @@ const Process: FC = () => {
                                 d="M166.7 283.3c-5.5 0-11-1.3-15.9-3.8l-62.2-31.1c-17.6-8.8-24.7-30.2-15.9-47.8s30.2-24.7 47.8-15.9l36.4 18.2 50.6-63.3c12.3-15.4 34.7-17.9 50.1-5.6 15.4 12.3 17.9 34.7 5.6 50.1l-68.6 85.8c-6.8 8.5-17.1 13.4-27.9 13.4zm-62.2-78.8c-6.7 0-12.1 5.4-12.1 12.1 0 4.6 2.6 8.8 6.7 10.8l62.2 31.1c5.1 2.6 11.3 1.2 14.9-3.3l68.6-85.8c4.3-5.1 3.7-12.8-1.4-17.1-5.1-4.3-12.8-3.7-17.1 1.4-.1.2-.3.3-.4.5l-56.6 70.7c-3.5 4.3-9.5 5.6-14.4 3.2L110 205.6c-1.7-.7-3.6-1.1-5.5-1.1z">
                             </path>
                         </svg></div>
-                    <div>
-                        <h4 className="mb-1">Community Networking </h4>
-                        {/* <p>Vestibulum ligula porta felis maecenas faucibus mollis.</p> */}
-                    </div>
-                </a></li>
-        </ul>
-       
-    </div>
-   
-</section>
-  );
+                        <div>
+                            <h4 className="mb-1">Community Networking </h4>
+                            {/* <p>Vestibulum ligula porta felis maecenas faucibus mollis.</p> */}
+                        </div>
+                    </a></li>
+                </ul>
+
+            </div>
+
+        </section>
+    );
 };
 
 export default Process;

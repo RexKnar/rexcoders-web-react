@@ -1,45 +1,79 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
-
-  type Testimonial8CardProps = {
-    id?: number;            
-    name: string;            
+type Testimonial8CardProps = {
+    id?: number;
+    name: string;
     rating: string;
-    review: string;       
-    image: string;       
-  };
+    review: string;
+    fullReview: string; // The full review text
+    image: string;
+};
 
-  const TestimonialCard8: FC<Testimonial8CardProps> = (props) => {
-      const { name, rating, review, image } = props;
-  
-      return (
-        
-          <div className="item col-md-6 col-xl-4">
-              <div className="card shadow-lg">
-                  <div className="card-body">
-                      <span className={`ratings ${rating} mb-3`}></span>
-                      <blockquote className="icon mb-0">
-                          <p>“{review}”</p>
-                          <div className="blockquote-details">
-                              <figure className="rounded-circle w-12 overflow-hidden">
-                                  <img
-                                      alt={name}
-                                      loading="lazy"
-                                      width="100"
-                                      height="100"
-                                      src={image}
-                                  />
-                              </figure>
-                              <div className="info">
-                                  <h5 className="mb-0">{name}</h5>
-                                  
-                              </div>
-                          </div>
-                      </blockquote>
-                  </div>
-              </div>
-          </div>
-      );
-  };
+const TestimonialCard8: FC<Testimonial8CardProps> = ({ name, rating, review, fullReview, image }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
 
-  export default TestimonialCard8;
+    // Toggle the expanded state
+    const toggleReviewText = () => {
+        setIsExpanded(!isExpanded);
+    };
+
+    return (
+        <div className="item col-md-6 col-xl-4 pb-1">
+            <div className="card shadow-lg">
+                <div className="card-body">
+                    <span className={`ratings ${rating} mb-3`}></span>
+                    <blockquote className="icon mb-0">
+                        <p className="review-text">"
+                            {isExpanded ? fullReview : review}
+                            <span
+                                onClick={toggleReviewText}
+                                className="show-more-text"
+                                role="button"
+                                tabIndex={0} // Add tabindex for better accessibility (clickable element)
+                            >
+                                {isExpanded ? '' : '...'}
+                            </span>"
+                        </p>
+                        <span
+                            onClick={toggleReviewText}
+                            className="show-more-text"
+                            role="button"
+                            tabIndex={0} // Add tabindex for better accessibility (clickable element)
+                        >
+                            {isExpanded ? (
+                                <>
+                                    <span>^ </span> {/* This is the upward arrow */}
+                                    <span
+                                        style={{
+                                            fontSize: '0.8rem',        // Reduce font size of "show less"
+                                            transform: 'translateY(-3px)', // Move "show less" up slightly
+                                            display: 'inline-block',   // Ensure the transform works
+                                        }}
+                                    >
+                                        show less
+                                    </span>
+                                </>
+                            ) : ''}
+                        </span>
+                        <div className="blockquote-details pt-2">
+                            <figure className="rounded-circle w-12 overflow-hidden">
+                                <img
+                                    alt={name}
+                                    loading="lazy"
+                                    width="100"
+                                    height="100"
+                                    src={image}
+                                />
+                            </figure>
+                            <div className="info">
+                                <h5 className="mb-0">{name}</h5>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default TestimonialCard8;

@@ -201,7 +201,7 @@ export const testimonialList8 = [
     id: 1,
     name: 'Sheik Ali',
     rating: 'five',
-    review: `I was looking out for the right place to build my skills in software developing to fulfill my long-standing desire`,
+    review: `I was looking out for the right place to build my skills in software developing to fulfill my long-standing desire to shift my career `,
     fullReview: `I was looking out for the right place to build my skills in software developing to fulfill my long-standing desire to shift my career from education industry to IT industry. Finally, I have found and joined Rexcoders Coding Academy. The way of training given in this academy was very unique. I got excellent learning experience from Rexcoders coding academy. The best parts of training I admired and enjoyed in the academy are individual care to each student, conducting weekly technical games, and weekend technical sessions. It is the right place to build your career towards IT.`,
     image: '/img/avatars/te7.jpg'
   },

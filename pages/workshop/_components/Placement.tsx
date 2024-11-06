@@ -6,7 +6,7 @@ import { clientList2 } from 'data/client';
 const Placement: FC = () => {
   return (
     <section className="wrapper bg-light">
-      <div className="container py-8 py-lg-5 py-md-10">
+      <div className="container pb-8 pb-lg-5 py-md-10">
         <div className="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0">
           <div className="col-lg-12 mt-lg-2">
             <h3 className="display-3 mb-3 pe-xxl-5 text-center">From Learners to Tech Leaders</h3>
@@ -14,10 +14,17 @@ const Placement: FC = () => {
           </div>
 
           <div className="col-lg-12">
-            <div className="row row-cols-2 row-cols-md-4  pt-lg-5 gx-0 gx-md-8 gx-xl-12 gy-12 align-item-center">
+            <div className="row row-cols-2 row-cols-md-4  pt-lg-5 gx-0 gx-md-8 gx-xl-12 gy-12 align-items-center">
               {clientList2.map((item) => (
                 <div className="col" key={item}>
-                  <FigureImage width={200} height={150} src={item} className="px-2 px-md-0 px-xxl-1" />
+                  <div className="d-flex justify-content-center align-items-center">
+                    <FigureImage
+                      width={450}
+                      height={150}
+                      src={item}
+                      className="px-2 px-md-0 px-xxl-1"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
