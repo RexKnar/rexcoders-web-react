@@ -7,7 +7,7 @@ const Mission: FC = () => {
   return (
     <Fragment>
       <section id="snippet-7" className="wrapper bg-light">
-        <div className="container pt-15 pt-md-6 pb-13 pb-md-15 mb-n14 mb-md-n17">
+        <div className="container ">
           <div className="row text-center mt-xl-12">
             <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 ">
               {/* <h2 className="fs-15 text-uppercase text-muted mb-3">App Features</h2> */}
@@ -17,7 +17,7 @@ const Mission: FC = () => {
             </div>
           </div>
 
-          <div className="row gx-lg-8 gx-xl-12 gy-8 mb-14 mb-md-17 mb-lg-13 ">
+          <div className="row gx-lg-8 gx-xl-12 gy-8 mb-md-10 ">
             {serviceList6.map(({ Icon, color, ...item }) => (
               <div className="col-md-6 col-lg-4" key={item.id}>
                 <ServiceCard3 {...item} Icon={<Icon className={`icon-svg-sm text-${color} me-4`} />} />

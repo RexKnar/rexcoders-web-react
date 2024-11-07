@@ -1,19 +1,19 @@
 import RegisterForm from "components/elements/forms/RegisterForm";
 import { FC } from "react";
 
-const Head: FC = () => {
+const HeroSection: FC = () => {
 
     return (
         <>
             <section className="wrapper bg-soft-primary angled lower-start">
-                <div className="container pt-17  pt-md-18 pb-8">
+                <div className="container pt-7  pt-md-8 pb-8">
                     <div className="row gx-0 gy-10 align-items-center">
                         <div className="col-lg-7 col-md-12">
                             <h1 className="display-1 text-black mb-4">
                                 Embark on a Cosmic Journey  <br /><span className="text-primary text-wrap">
                                     <div className="Typewriter typewriter-wrapper">Through the React Universe</div>
                                 </span></h1>
-                            <p className="lead lh-sm text-black mb-7  pe-lg-0 pe-xxl-15 "style={{textAlign:'justify'}}>
+                            <p className="lead lh-sm text-black mb-7  pb-8 pe-lg-0 pe-xxl-15 "style={{textAlign:'justify'}}>
                                 Step into the future of front-end development! Join our stellar React workshop and explore the vast potential of React101. Get hands-on with the front-end library behind the world’s most dynamic web applications, and elevate your coding skills to cosmic levels.</p>
                             <div className="row gx-2 align-items-center">
                                 <div className="col-auto pb-3">
@@ -44,4 +44,4 @@ const Head: FC = () => {
     );
 };
 
-export default Head;
+export default HeroSection;

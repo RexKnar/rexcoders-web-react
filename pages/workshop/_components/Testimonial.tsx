@@ -9,7 +9,7 @@ const Testimonial: FC = () => {
     <>
 
       <section id="snippet-8" className="wrapper bg-light ">
-        <div className="container pt-15 pt-md-17 pt-lg-10 pb-10 pb-md-5 align-item-center">
+        <div className="container pt-7 pt-md-7 pt-lg-10 pb-10 pb-md-5 align-item-center">
           <div>
             <h2 className="display-4 text-center mb-8">Value your learning journey. Review past <br /> student feedback for informed choices</h2>
             <div className="grid">

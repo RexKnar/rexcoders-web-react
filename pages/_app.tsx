@@ -73,24 +73,25 @@ function MyApp({ Component, pageProps }: AppProps) {
       <LazyMotion strict features={loadFeatures}>
       <ThemeProvider>
         
-        {loading ? ( <div className="page-loader" />) : (
-         <>
-           <PageProgress />
-         
-         <header className="position-absolute w-100">
-                <Navbar
-                  info
-                  navOtherClass="navbar-other ms-lg-4"
-                  navClassName="navbar navbar-expand-lg center-nav  navbar-bg-light"
-                  button={<a
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modal-onetoone"
-                    className="rounded btn btn-sm btn-primary"
-                  >
-                    Book 1:1
-                  </a>} />
-              </header><Component {...pageProps} /></>)}
+      {loading ? (
+  <div className="page-loader" />
+) : (
+  <>
+    <PageProgress />
+    {pathname !== '/workshop/details' && (
+      <header className="position-absolute w-100">
+        <Navbar
+          info
+          navOtherClass="navbar-other ms-lg-4"
+          navClassName="navbar navbar-expand-lg center-nav navbar-bg-light"
+          button={<a href="#" data-bs-toggle="modal" data-bs-target="#modal-onetoone" className="rounded btn btn-sm btn-primary">Book 1:1</a>}
+        />
+      </header>
+    )}
+    <Component {...pageProps} />
+  </>
+)}
+
       </ThemeProvider>
       </LazyMotion>
       </QueryClientProvider>
