@@ -37,7 +37,7 @@ type NavbarProps = {
 };
 // ===================================================================
 
-const Header: FC<NavbarProps> = (props) => {
+const Head: FC<NavbarProps> = (props) => {
   const { navClassName, info, search, social, language, button, cart, fancy, navOtherClass, stickyBox, logoAlt } =
     props;
 
@@ -140,9 +140,6 @@ const Header: FC<NavbarProps> = (props) => {
             </button>
           </li>
         </ul>
-        <div className="nav-item d-none d-md-block">
-          <button className="btn btn-primary">New Button</button>
-        </div>
       </div>
     </>
   );
@@ -184,7 +181,7 @@ const Header: FC<NavbarProps> = (props) => {
 };
 
 // set deafult Props
-Header.defaultProps = {
+Head.defaultProps = {
   cart: false,
   info: false,
   social: false,
@@ -195,4 +192,4 @@ Header.defaultProps = {
   navClassName: 'navbar navbar-expand-lg center-nav transparent navbar-light'
 };
 
-export default Header;
+export default Head;

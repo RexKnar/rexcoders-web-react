@@ -10,8 +10,7 @@ import Mission from "./_components/Mission";
 import Placement from "./_components/Placement";
 import Footer from "./_components/Footer";
 import HeroSection from "./_components/HeroSection";
-import Header from "./_components/header";
-
+import Header from "./_components/Head";
 
 const details: NextPage = () => {
     return (
