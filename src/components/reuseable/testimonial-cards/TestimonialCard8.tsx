@@ -3,13 +3,14 @@ import { FC, useState } from 'react';
 type Testimonial8CardProps = {
     id?: number;
     name: string;
+    designation: string;
     rating: string;
     review: string;
     fullReview: string; // The full review text
     image: string;
 };
 
-const TestimonialCard8: FC<Testimonial8CardProps> = ({ name, rating, review, fullReview, image }) => {
+const TestimonialCard8: FC<Testimonial8CardProps> = ({ name,designation, rating, review, fullReview, image }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     // Toggle the expanded state
@@ -42,16 +43,8 @@ const TestimonialCard8: FC<Testimonial8CardProps> = ({ name, rating, review, ful
                         >
                             {isExpanded ? (
                                 <>
-                                    <span>^ </span> {/* This is the upward arrow */}
-                                    <span
-                                        style={{
-                                            fontSize: '0.8rem',        // Reduce font size of "show less"
-                                            transform: 'translateY(-3px)', // Move "show less" up slightly
-                                            display: 'inline-block',   // Ensure the transform works
-                                        }}
-                                    >
-                                        show less
-                                    </span>
+                                   <i className="uil uil-angle-up"style={{ marginRight: '8px' }}></i> 
+                                    show less
                                 </>
                             ) : ''}
                         </span>
@@ -67,6 +60,7 @@ const TestimonialCard8: FC<Testimonial8CardProps> = ({ name, rating, review, ful
                             </figure>
                             <div className="info">
                                 <h5 className="mb-0">{name}</h5>
+                                <p className="mb-0">{designation}</p>
                             </div>
                         </div>
                     </blockquote>

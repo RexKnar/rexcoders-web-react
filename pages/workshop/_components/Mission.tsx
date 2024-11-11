@@ -24,7 +24,7 @@ const Mission: FC = () => {
               </div>
             ))}
           </div>
-          <div className="d-flex justify-content-center align-items-center pb-5">
+          <div className="d-flex justify-content-center align-items-center pt-6">
             <button
               className="btn btn-primary rounded-pill mx-1 mb-2 mb-md-0"
               data-bs-toggle="modal"

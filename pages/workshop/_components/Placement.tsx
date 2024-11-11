@@ -14,7 +14,7 @@ const Placement: FC = () => {
           </div>
 
           <div className="col-lg-12">
-            <div className="row row-cols-2 row-cols-md-4  pt-lg-5 gx-0 gx-md-8 gx-xl-12 gy-12 align-items-center">
+            <div className="row row-cols-3 row-cols-md-4  pl-10 pt-lg-5 gx-0 gx-md-8 gx-xl-12 gy-12 align-items-center">
               {clientList2.map((item) => (
                 <div className="col" key={item}>
                   <div className="d-flex justify-content-center align-items-center">
