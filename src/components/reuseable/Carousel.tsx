@@ -54,7 +54,7 @@ const Carousel: FC<CarouselProps> = ({
         )}
 
         {/* custom pagination */}
-        {pagination && <div className="swiper-pagination" ref={(node) => setPaginationEl(node)} />}
+        {/* {pagination && <div className="swiper-pagination" ref={(node) => setPaginationEl(node)} />} */}
       </div>
     </Fragment>
   );

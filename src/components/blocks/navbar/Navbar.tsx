@@ -104,7 +104,7 @@ const Navbar: FC<NavbarProps> = (props) => {
       {/* ============= right side header content ============= */}
       <div className={navOtherClass}>
         <ul className="flex-row navbar-nav align-items-center ms-auto">
-          {/* ============= language dropdwown ============= */}
+          {/* ============= language dropdown ============= */}
           {language && <Language />}
 
           {/* ============= info button ============= */}

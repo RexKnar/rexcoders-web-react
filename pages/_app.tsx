@@ -30,12 +30,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
   const [loading, setLoading] = useState(true);
 
-  // added bootstrap functionality
   useEffect(() => {
     if (typeof window !== 'undefined') import('bootstrap');
   }, []);
 
-  // scroll animation added
   useEffect(() => {
     (async () => {
       const scrollCue = (await import('plugins/scrollcue')).default;
@@ -44,11 +42,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     })();
   }, [pathname]);
 
-  // manage loading status
   useEffect(() => setLoading(false), []);
   const loadFeatures = () =>
     import("../src/utils/framer-motion-features/dom-max").then(res => res.default)
-
 
   const [queryClient] = useState(
     () =>
@@ -72,25 +68,40 @@ function MyApp({ Component, pageProps }: AppProps) {
           <ReactQueryDevtools initialIsOpen={false} />
       <LazyMotion strict features={loadFeatures}>
       <ThemeProvider>
-        
         {loading ? ( <div className="page-loader" />) : (
          <>
            <PageProgress />
-         
-         <header className="position-absolute w-100">
-                <Navbar
-                  info
-                  navOtherClass="navbar-other ms-lg-4"
-                  navClassName="navbar navbar-expand-lg center-nav  navbar-bg-light"
-                  button={<a
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modal-onetoone"
-                    className="rounded btn btn-sm btn-primary"
-                  >
-                    Book 1:1
-                  </a>} />
-              </header><Component {...pageProps} /></>)}
+           <header className="position-absolute w-100">
+             <Navbar
+               info
+               navOtherClass="navbar-other ms-lg-4"
+               navClassName="navbar navbar-expand-lg center-nav navbar-bg-light pt-2"
+               button={
+                 <>
+                   <a
+                     href="#"
+                     data-bs-toggle="modal"
+                     data-bs-target="#modal-onetoone"
+                     className="rounded btn btn-sm btn-primary me-2"
+                   >
+                     Book 1:1
+                   </a>
+                   <a
+                     href="#"
+                     data-bs-toggle="modal"
+                     data-bs-target="#modal-signin"
+                     className="rounded btn btn-sm btn-outline-primary me-2"
+                   >
+                     Sign In
+                   </a>
+                  
+                 </>
+               }
+             />
+           </header>
+           <Component {...pageProps} />
+         </>
+        )}
       </ThemeProvider>
       </LazyMotion>
       </QueryClientProvider>
