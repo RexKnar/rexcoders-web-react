@@ -1,7 +1,7 @@
 import React from 'react';
 import EventCard2 from 'components/reuseable/event-card/EventCard2';
 
-const Event = () => {
+const Events = () => {
 
 
   return (
@@ -11,4 +11,4 @@ const Event = () => {
   );
 };
 
-export default Event;
+export default Events;

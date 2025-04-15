@@ -22,12 +22,19 @@ const navItems : any[]=[
 },
 {
     id: 4,
-    title: 'Event',
-    path:'/event',
+    title: 'Events',
+    path:'/events',
     children: []
   },
+  {
+    id: 5,
+    title: 'Blogs',
+    path:'/blogs',
+    children: []
+  },
+
 {
-  id: 5,
+  id: 6,
   title: 'Contact',
   path:'/contact',
   children: []

@@ -5,28 +5,35 @@ export const blogList1 = [
     category: 'Coding',
     date: '14 Apr 2022',
     image: '/img/photos/b4.jpg',
-    title: 'Ligula tristique quis risus'
+    title: 'Ligula tristique quis risus',
+    description: 'Welcome to our journal. Here you can find the latest company news and business articles.'
   },
   {
     id: 2,
     category: 'Workspace',
     date: '29 Mar 2022',
     image: '/img/photos/b5.jpg',
-    title: 'ullam id dolor elit id nibh'
+    title: 'ullam id dolor elit id nibh',
+    description: 'Welcome to our journal. Here you can find the latest company news and business articles.'
+
   },
   {
     id: 3,
     category: 'Meeting',
     date: '26 Feb 2022',
     image: '/img/photos/b6.jpg',
-    title: 'Ultricies fusce porta elit'
+    title: 'Ultricies fusce porta elit',
+    description: 'Welcome to our journal. Here you can find the latest company news and business articles.'
+
   },
   {
     id: 4,
     category: 'Business Tips',
     date: '7 Jan 2022',
     image: '/img/photos/b7.jpg',
-    title: 'Morbi leo risus porta eget'
+    title: 'Morbi leo risus porta eget',
+    description: 'Welcome to our journal. Here you can find the latest company news and business articles.'
+
   }
 ];
 
