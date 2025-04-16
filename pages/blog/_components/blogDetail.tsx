@@ -1,6 +1,6 @@
 import { Calendar, Heart, MessageCircle, User } from 'lucide-react';
 import React, { useEffect } from 'react';
-import Image from 'next/image'; 
+import Image from 'next/image';
 import GLightbox from 'glightbox';
 
 const BlogDetails: React.FC = () => {
@@ -10,7 +10,7 @@ const BlogDetails: React.FC = () => {
     });
 
     return () => {
-      lightbox.destroy(); 
+      lightbox.destroy();
     };
   }, []);
   return (
@@ -325,26 +325,25 @@ const BlogDetails: React.FC = () => {
               </div>
             </div>
           </div>
-          <aside className="col-lg-4 sidebar position-fixed top-0 end-0 vh-100 overflow-auto bg-light p-3">
+          <aside className="col-lg-4 sidebar position-fixed top-0 end-0 vh-100 overflow-auto bg-light p-3 mt-15">
             <div className="widget">
-              <h4 className="widget-title mb-3">About Us</h4>
-              <p>
-                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum. Nulla vitae elit
-                libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.
-              </p>
-              <nav className="nav social">
+              <h4 className="widget-title mb-3">Categories</h4>
+              <ul className="unordered-list bullet-primary text-reset">
                 {[
-                  { icon: 'twitter', url: 'https://twitter.com/uilibofficial' },
-                  { icon: 'facebook-f', url: 'https://facebook.com/uiLibOfficial/' },
-                  { icon: 'dribbble', url: '#' },
-                  { icon: 'instagram', url: 'https://www.instagram.com/uilibofficial/' },
-                  { icon: 'youtube', url: 'https://www.youtube.com/channel/UCsIyD-TSO1wQFz-n2Y4i3Rg' }
-                ].map((social) => (
-                  <a key={social.icon} href={social.url} target="_blank" rel="noreferrer">
-                    <i className={`uil uil-${social.icon}`}></i>
-                  </a>
+                  { name: 'Teamwork', count: 21 },
+                  { name: 'Ideas', count: 19 },
+                  { name: 'Workspace', count: 16 },
+                  { name: 'Coding', count: 7 },
+                  { name: 'Meeting', count: 12 },
+                  { name: 'Business Tips', count: 14 }
+                ].map((category) => (
+                  <li key={category.name}>
+                    <a href="#">
+                      {category.name} ({category.count})
+                    </a>
+                  </li>
                 ))}
-              </nav>
+              </ul>
             </div>
             <div className="widget">
               <h4 className="widget-title mb-3">Popular Posts</h4>
@@ -371,60 +370,10 @@ const BlogDetails: React.FC = () => {
                       </h6>
                       <ul className="post-meta">
                         <li className="post-date">
-                          <Calendar className="uil uil-calendar-alt" />
                           <span>{['26 Mar 2022', '16 Feb 2022', '08 Jan 2022'][num - 1]}</span>
-                        </li>
-                        <li className="post-comments">
-                          <a href="#">
-                            <MessageCircle className="uil uil-comment" />
-                            {[3, 6, 5][num - 1]}
-                          </a>
                         </li>
                       </ul>
                     </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="widget">
-              <h4 className="widget-title mb-3">Categories</h4>
-              <ul className="unordered-list bullet-primary text-reset">
-                {[
-                  { name: 'Teamwork', count: 21 },
-                  { name: 'Ideas', count: 19 },
-                  { name: 'Workspace', count: 16 },
-                  { name: 'Coding', count: 7 },
-                  { name: 'Meeting', count: 12 },
-                  { name: 'Business Tips', count: 14 }
-                ].map((category) => (
-                  <li key={category.name}>
-                    <a href="#">
-                      {category.name} ({category.count})
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="widget">
-              <h4 className="widget-title mb-3">Tags</h4>
-              <ul className="list-unstyled tag-list">
-                {['Still Life', 'Urban', 'Nature', 'Landscape', 'Macro', 'Fun', 'Workshop', 'Photography'].map(
-                  (tag) => (
-                    <li key={tag}>
-                      <a className="btn btn-soft-ash btn-sm rounded-pill" href="#">
-                        {tag}
-                      </a>
-                    </li>
-                  )
-                )}
-              </ul>
-            </div>
-            <div className="widget">
-              <h4 className="widget-title mb-3">Archive</h4>
-              <ul className="unordered-list bullet-primary text-reset">
-                {['February 2019', 'January 2019', 'December 2018', 'November 2018', 'October 2018'].map((month) => (
-                  <li key={month}>
-                    <a href="#">{month}</a>
                   </li>
                 ))}
               </ul>
@@ -435,8 +384,6 @@ const BlogDetails: React.FC = () => {
     </section>
   );
 };
-
-// Comment component for nested comments
 const Comment: React.FC<{ comment: any }> = ({ comment }) => {
   return (
     <li className="comment">

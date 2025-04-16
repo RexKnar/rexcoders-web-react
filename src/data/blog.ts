@@ -6,7 +6,8 @@ export const blogList1 = [
     date: '14 Apr 2022',
     image: '/img/photos/b4.jpg',
     title: 'Ligula tristique quis risus',
-    description: 'Welcome to our journal. Here you can find the latest company news and business articles.'
+    description: 'Welcome to our journal. Here you can find the latest company news and business articles.',
+    path:'/blogDetail'
   },
   {
     id: 2,
