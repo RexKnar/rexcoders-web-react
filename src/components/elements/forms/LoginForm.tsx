@@ -56,7 +56,7 @@ const LoginForm: FC = () => {
       </p>
 
       <p className="mb-0">
-        Don&apos;t have an account? <NextLink title="Sign up" href="/register" className="hover" />
+        Don&apos;t have an account? <a  data-bs-toggle="modal" data-bs-target="#modal-signup" href="">Sign Up</a>
       </p>
 
       <div className="my-4 divider-icon">or</div>

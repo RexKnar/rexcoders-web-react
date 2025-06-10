@@ -78,7 +78,7 @@ const RegisterForm: FC = () => {
       </form>
 
       <p className="mb-0">
-        Already have an account? <NextLink title="Sign in" href="/login" className="hover" />
+        Already have an account? <a href=""data-bs-toggle="modal" data-bs-target="#modal-signin">Sign In</a>
       </p>
 
       <div className="divider-icon my-4">or</div>
