@@ -3,20 +3,24 @@ import Link from 'next/link';
 import Image from 'next/image';
 import NextLink from '../links/NextLink';
 
-// ======================================================
+
 type BlogCard1Props = {
   date: string;
   image: string;
   title: string;
   category: string;
+  description: string; 
 };
-// ======================================================
 
-const BlogCard1: FC<BlogCard1Props> = ({ date, image, title, category }) => {
+const truncateText = (text: string, maxLength: number) => {
+  return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
+};
+
+const BlogCard1: FC<BlogCard1Props> = ({ date, image, title, category, description }) => {
   return (
     <article>
       <figure className="overlay overlay-1 hover-scale rounded mb-6">
-        <Link href="#" passHref legacyBehavior>
+        <Link href="/blog" passHref legacyBehavior>
           <a>
             <Image width={560} height={350} src={image} alt={title} style={{ width: '100%', height: 'auto' }} />
             <span className="bg" />
@@ -30,8 +34,10 @@ const BlogCard1: FC<BlogCard1Props> = ({ date, image, title, category }) => {
 
       <div className="post-header">
         <h2 className="post-title h3 mb-3">
-          <NextLink title="Ligula tristique quis risus" className="link-dark" href="#" />
+          <NextLink title={title} className="link-dark" href="#" />
         </h2>
+
+        <p>{truncateText(description, 60)}</p>
       </div>
 
       <div className="post-footer">
