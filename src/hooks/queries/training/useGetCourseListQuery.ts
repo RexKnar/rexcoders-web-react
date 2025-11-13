@@ -9,17 +9,21 @@ function getCourseList(
     { page, limit }: { page: number; limit: number },
     options?: UseQueryOptions<PaginatedResponse<any>>
   ): UseQueryOptions<PaginatedResponse<any>> {
+    
     return {
       ...options,
       queryKey: [GET_COURSE_LIST, page, limit],
       queryFn: async () => {
-        return await makeAPICall<PaginatedResponse<any>>(
+        console.log('demo1',limit);
+        let response= await makeAPICall<PaginatedResponse<any>>(
           GET_COURSE_LIST,
           {},
           {
           },
           {}
         );
+        console.log('response',response);
+        return response;
       },
     };
   }
@@ -29,5 +33,6 @@ export function useGetCourseListQuery(
     { page, limit }: { page: number | 1; limit: number | 10  },
     options?: UseQueryOptions<PaginatedResponse<any>>
   ): UseQueryResult<PaginatedResponse<any>> {
+    
     return useQuery(getCourseList({ page, limit }, options));
   }

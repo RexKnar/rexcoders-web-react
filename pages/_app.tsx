@@ -25,10 +25,20 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Navbar } from 'components/blocks/navbar';
 import PageProgress from 'components/common/PageProgress';
+import Link from 'next/link';
+import Progress from 'components/Progress';
+import ScrollCue from 'components/ScrollCue';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps:{session, ...pageProps } }: AppProps) {
   const { pathname } = useRouter();
   const [loading, setLoading] = useState(true);
+  const [fullUrl, setFullUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setFullUrl(window.location.href); // e.g., https://example.com/dashboard?tab=settings
+    }
+  }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') import('bootstrap');
@@ -59,6 +69,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+   
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -70,12 +81,19 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ThemeProvider>
         {loading ? ( <div className="page-loader" />) : (
          <>
-           <PageProgress />
+              {/* USED FOR SCROLL ANIMATION */}
+        <ScrollCue />
+
+{/* USED FOR PAGE SCROLL PROGRESS BAR */}
+<PageProgress />
+
+{/* USED FOR PROGRESS BAR ANIMATE */}
+<Progress />
            <header className="position-absolute w-100">
              <Navbar
-               info
-               navOtherClass="navbar-other ms-lg-4"
-               navClassName="navbar navbar-expand-lg center-nav navbar-bg-light pt-2"
+             fancy
+                navClassName="navbar navbar-expand-lg fancy navbar-light navbar-bg-light caret-none"
+              //  navClassName="navbar navbar-expand-lg center-nav navbar-bg-light pt-2"
                button={
                  <>
                    <a
@@ -86,14 +104,16 @@ function MyApp({ Component, pageProps }: AppProps) {
                    >
                      Book 1:1
                    </a>
-                   <a
+                   <Link href={`http://localhost:3000/signin?callbackUrl=${fullUrl}`}> Sign IN</Link>
+
+                   {/* <a
                      href="#"
                      data-bs-toggle="modal"
                      data-bs-target="#modal-signin"
                      className="rounded btn btn-sm btn-outline-primary me-2"
                    >
                      Sign In
-                   </a>
+                   </a> */}
                   
                  </>
                }

@@ -27,17 +27,10 @@ const GoogleTestimonial: FC = () => {
   ];
   
   return (
-    <section className='container wrapper rounded-4'>
-    <div className="card bg-soft-primary mb-15 mb-md-17">
-      <div className=" pt-14 px-lg-0">
-        <div className="text-center row">
-          <div className="col-lg-8 offset-lg-2">
-            <h2 className="mb-3 fs-16 text-uppercase text-primary">Happy Learners </h2>
-            <h3 className="mb-10 display-4 px-xxl-10">
-            Value your learning journey. Review past <span className="underline-3 style-2 green">student feedback</span> for informed choices
-            </h3>
-          </div>
-        </div>
+    <section className='container-fluid bg-soft-primary wrapper rounded-4'>
+    <div className="">
+      <div className="">
+      
 
         <div className="row gx-lg-8 gx-xl-12 align-items-center">
           <div className="mx-auto my-auto col-lg-5 col-6 ms-auto col-xl-4 d-lg-flex">
@@ -46,7 +39,7 @@ const GoogleTestimonial: FC = () => {
               <a href="https://www.google.com/search?q=rexcoders&oq=rexcoders&gs_lcrp=EgZjaHJvbWUqDwgAECMYJxjjAhiABBiKBTIPCAAQIxgnGOMCGIAEGIoFMgYIARBFGDwyFQgCEC4YJxivARjHARiABBiKBRiOBTIGCAMQRRg9MgYIBBBFGDwyBggFEEUYPDIGCAYQRRg8MgYIBxBFGEGoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x3b0455ee63d50f97:0x8a38b79d1146805b,1,,,," className='mx-auto'>View more on Google</a>
             </div>
           </div>
-
+{/* 
           <div className="col-lg-6 col-xl-6 col-xxl-5 me-auto">
             <div className="mb-6 swiper-container dots-start dots-closer">
               <Carousel grabCursor pagination={false} autoplay={true} spaceBetween={0} navigation={false} slidesPerView={1}>
@@ -66,7 +59,7 @@ const GoogleTestimonial: FC = () => {
                 ))}
               </Carousel>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -3,7 +3,8 @@ import { FC } from 'react';
 // ==================================================
 type AccordionProps = {
   no: string;
-  body: string;
+  body?: string;
+  content?: string;
   heading: string;
   expand: boolean;
   type?: 'plain' | 'shadow-lg';
@@ -11,7 +12,7 @@ type AccordionProps = {
 // ==================================================
 
 const Accordion: FC<AccordionProps> = (props) => {
-  const { no, body, heading, expand, type = '' } = props;
+  const { no, body='', heading, expand, type = '', content='' } = props;
 
   return (
     <div className={`card ${type} accordion-item`}>
@@ -33,9 +34,8 @@ const Accordion: FC<AccordionProps> = (props) => {
         data-bs-parent="#accordionExample"
         className={`accordion-collapse collapse ${expand && 'show'}`}
       >
-        <div className="card-body">
-          <p>{body}</p>
-        </div>
+       { content && ( <div className="card-body" dangerouslySetInnerHTML={{__html: content}} /> ) }       
+       { body && ( <div className="card-body" >{body} </div> ) }
       </div>
     </div>
   );

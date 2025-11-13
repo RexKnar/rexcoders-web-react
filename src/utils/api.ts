@@ -17,17 +17,24 @@ export async function makeAPICall<T>(
   });
 
 //   const url = new URL(`${window.location.origin}${endpoint}`);
-const url = new URL(`http://localhost:7700${endpoint}`);
+const url = new URL(`${process.env.NEXT_PUBLIC_API_BASE_URL}${endpoint}`);
+
   Object.keys(params).forEach((key) =>
     url.searchParams.append(key, params[key].toString())
   );
 
   const body = JSON.stringify(payload);
-  const header =token? { 'Authorization': `Bearer ${token}` }: {}
+  const branchId = '3acce6d0-532e-4e75-aa7e-b69690124e0a';
+  const header =token? { 'Authorization': `Bearer ${token}`, 'branchId': branchId } : {'BranchId': branchId}
+  const headers: Record<string, string> = {
+    ...(token ? { 'Authorization': `Bearer ${token}` } : {}),
+    'branchId': branchId, // must match backend CORS whitelist
+  };
 
   const response = await fetch(url.toString(), {
     method: requestType,
     ...header,
+    headers,
     body: requestType.toUpperCase() === 'GET' ? null : body,
   });
 

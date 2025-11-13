@@ -7,7 +7,7 @@ export const GET_COURSE_DETAIL=  `GET_COURSE_DETAIL`;
 export default <EndpointDetails>{
   [GET_COURSE_LIST]: {
     requestType: `GET`,
-    endpoint: `/api/v1/training`,
+    endpoint: `/api/institute/course`,
   },
   [GET_COURSE_DETAIL]: {
     requestType: `GET`,

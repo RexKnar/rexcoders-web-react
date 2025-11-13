@@ -19,6 +19,14 @@ export const factList2 = [
   { id: 4, amount: 4523, title: 'Awards Won' }
 ];
 
+// used in the facts-3 block
+export const heroFacts = [
+  { id: 1, amount: 7518, color: 'btn-soft-purple', icon: 'uil-trophy', title: '100% Placement Support', description:'Personalized career guidance to help you land your first job.' },
+  { id: 2, amount: 3472, color: 'btn-soft-red', icon: 'uil-presentation-check' , title: '100% Practical Training',description:'Learn by building projects with real industry tools.' },
+  { id: 3, amount: 2184, color: 'btn-soft-yellow', icon: 'uil-rupee-sign', title: 'Easy EMI Options', description:'Pay in simple monthly installments, learn stress-free.' },
+  // { id: 4, amount: 4523, color: 'btn-soft-aqua',  icon: 'uil-rupee-sign', title: '100% Refund Policy', description:'If not satisfied with the training in 7 days, training charges will be refunded.' }
+];
+
 // used in the facts-4 block
 export const factList3 = [
   { id: 1, value: 7518, title: 'Completed Projects' },

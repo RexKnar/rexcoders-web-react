@@ -1,3 +1,4 @@
+"use client";
 import { FC } from 'react';
 import Plyr from 'plyr-react';
 import Image from 'next/image';
