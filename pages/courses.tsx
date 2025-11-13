@@ -1,19 +1,10 @@
-import { ShortCourseList } from 'components/blocks/courses';
-import { Navbar } from 'components/blocks/navbar';
+
 import Filter from 'components/common/Filter';
-import Breadcrumb from 'components/reuseable/Breadcrumb';
 import CourseCard from 'components/reuseable/course-cards/CourseCard';
-import { useGetInstituteCourseListQuery } from 'queries/course/useGetInstituteCourseListQuery';
 import { useEffect, useState } from 'react';
 
 export default function Courses() {
-  const [courseList1, setCourseList] = useState<any>([]);
-  const page = 1;
-  const limit = 10;
-  const { data: courseListResponse } = useGetInstituteCourseListQuery({ page, limit, filter: {} });
-  useEffect(() => {
-    setCourseList(courseListResponse);
-  }, [courseListResponse]);
+
 
   const courseList = [
     {
@@ -87,7 +78,7 @@ export default function Courses() {
     <>
       <main className="content-wrapper">
       <section className="wrapper bg-soft-primary pt-18">
-          <div className="container pt-10 text-center pb-10 pt-md-8 pb-md-10">
+          <div className="container pt-10 pb-10 text-center pt-md-8 pb-md-10">
             <div className="row">
               {/* <div className="mx-auto col-sm-10 col-md-8 col-lg-6 col-xl-6 col-xxl-5">
                 <h3 className="mb-3 display-5">About Re<span className="text-primary">x</span>coders</h3>
@@ -119,7 +110,7 @@ export default function Courses() {
         </div> */}
         <section className="container">
             <div className='row'>
-                <div className='col-lg-3  rounded-4 shadow-lg mt-10'>
+                <div className='mt-10 shadow-lg col-lg-3 rounded-4'>
                     <Filter />
                 </div>
                 <div className='col-lg-9'>

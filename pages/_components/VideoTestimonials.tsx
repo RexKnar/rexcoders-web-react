@@ -9,7 +9,6 @@ export const VideoTestimonials = () => {
     <div className="mb-10 swiper-container swiper-auto swiper-auto-xs mb-md-12" >
     <Carousel
       loop
-      updateOnWindowResize
       speed={3000}
       autoplaySpeed={3000}
       spaceBetween={2}

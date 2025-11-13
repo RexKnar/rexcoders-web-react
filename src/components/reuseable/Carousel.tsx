@@ -1,66 +1,4 @@
-// import { FC, Fragment, ReactElement, useState } from 'react';
-// import { Autoplay, Navigation, Pagination } from 'swiper';
-// import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 
-// // ==================================================================
-// interface CarouselProps extends SwiperProps {
-//   pagination?: boolean;
-//   navigation?: boolean;
-//   spaceBetween?: number;
-//   slideClassName?: string;
-//   children: ReactElement[];
-//   slidesPerView?: number | 'auto';
-// }
-// // ==================================================================
-
-// const Carousel: FC<CarouselProps> = ({
-//   children,
-//   slideClassName,
-//   spaceBetween = 5,
-//   slidesPerView = 3,
-//   pagination = true,
-//   navigation = true,
-//   loop=true,
-//   ...others
-// }) => {
-//   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
-//   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
-//   const [paginationEl, setPaginationEl] = useState<HTMLElement | null>(null);
-
-//   return (
-//     <Fragment>
-//       <Swiper
-//         spaceBetween={spaceBetween}
-//         slidesPerView={slidesPerView}
-//         modules={[Pagination, Navigation, Autoplay]}
-//         navigation={navigation ? { prevEl, nextEl } : false}
-//         pagination={pagination ? { clickable: true, el: paginationEl } : false}
-//         {...others}
-//       >
-//         {children.map((slide, i) => (
-//           <SwiperSlide className={slideClassName} key={i}>
-//             {slide}
-//           </SwiperSlide>
-//         ))}
-//       </Swiper>
-
-//       <div className="swiper-controls">
-//         {/* custom navigation */}
-//         {navigation && (
-//           <div className="swiper-navigation">
-//             <div role="button" ref={(node) => setPrevEl(node)} className="swiper-button swiper-button-prev" />
-//             <div role="button" ref={(node) => setNextEl(node)} className="swiper-button swiper-button-next" />
-//           </div>
-//         )}
-
-//         {/* custom pagination */}
-//         {/* {pagination && <div className="swiper-pagination" ref={(node) => setPaginationEl(node)} />} */}
-//       </div>
-//     </Fragment>
-//   );
-// };
-
-// export default Carousel;
 import { FC, ReactElement } from 'react';
 import Slider, { Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -86,6 +24,26 @@ interface CarouselProps extends Omit<Settings, 'slidesToShow' | 'slidesToScroll'
   slideClassName?: string;
   children: ReactElement[];
   slidesPerView?: number | 'auto';
+  loop?: boolean;
+  updateOnWindowResize?: boolean;
+  autoplay?: boolean;
+  autoplaySpeed?: number;
+  adaptiveHeight?: boolean;
+  responsive?: any;
+  speed?: number;
+  dots?: boolean;
+  arrows?: boolean;
+  infinite?: boolean;
+  pauseOnHover?: boolean;
+  slidesToShow?: number;
+  slidesToScroll?: number;
+  initialSlide?: number;
+  centerMode?: boolean;
+  variableWidth?: boolean;
+  wrapperClass?: string;
+  dir?: string;
+  grabCursor?: boolean;
+  breakpoints?: any;
 }
 
 const Carousel: FC<CarouselProps> = ({

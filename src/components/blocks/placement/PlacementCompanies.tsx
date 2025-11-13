@@ -4,7 +4,6 @@ import FigureImage from 'components/reuseable/FigureImage';
 // -------- data -------- //
 import { companyList } from 'data/placement-companies';
 
-import carouselBreakpoints from 'utils/carouselBreakpoints';
 import Carousel from 'components/reuseable/Carousel';
 
 const PlacementCompanies: FC = () => {
@@ -19,30 +18,8 @@ const PlacementCompanies: FC = () => {
             </h3>
           </div>
         </div>
-        {/* <Carousel
-              loop
-              updateOnWindowResize
-              speed={7000}
-              spaceBetween={40}
-              navigation={true}
-              pagination={false}
-              slidesPerView="auto"
-              autoplay={{ delay: 1000 }}
-              wrapperClass="swiper-wrapper ticker"
-              className="overflow-visible "
-              dir="rtl">
-              {[1, 2, 3, 4, 5, 6, 7].map((num) => (
-                <Plyr key={num}  
-                options={{ loadSprite: true, clickToPlay: true }}
-                source={{ type: 'video', sources: [{ src: 'PtKPv6mOwow', provider: 'youtube' }] }}
-              />
-                // <figure className="shadow-xl rounded-xl" key={num}>
-                //   <img src={`/img/photos/ma${num}.jpg`} srcSet={`/img/photos/ma${num}@2x.jpg 2x`} alt="" />
-                // </figure>
-              ))}
-            </Carousel> */}
-        <Carousel breakpoints={carouselBreakpoints} pagination={false}  navigation={false} loop={true} slidesPerView="auto"
-              autoplay={{ delay: 1000 }}>
+        <Carousel  pagination={false}  navigation={false} loop={true} slidesPerView="auto"
+              autoplay={true}>
     {companyList.map((item) => (
                 <div className="align-content-center col" key={item}>
                   <FigureImage width={450} height={301} src={item} className="m-auto w-15" />
