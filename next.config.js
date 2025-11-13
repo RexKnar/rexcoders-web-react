@@ -2,10 +2,10 @@
 const nextConfig = {
   // swcMinify: true,
   reactStrictMode: false,
-  output: 'export',
-  images: {
-    unoptimized: true
-  }
+  // output: 'export',
+  // images: {
+  //   unoptimized: true
+  // }
   // exportTrailingSlash: true,
   // exportPathMap: async function (defaultPathMap) {
   //   return {
@@ -18,4 +18,5 @@ const nextConfig = {
   // },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
+
