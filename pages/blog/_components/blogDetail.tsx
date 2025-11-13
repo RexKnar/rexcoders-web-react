@@ -1,18 +1,35 @@
-import { Calendar, Heart, MessageCircle, User } from 'lucide-react';
+"use client";
+import { Calendar, Heart, MessageCircle,  } from 'lucide-react';
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import GLightbox from 'glightbox';
+// import GLightbox from 'glightbox';
 
 const BlogDetails: React.FC = () => {
   useEffect(() => {
-    const lightbox = GLightbox({
-      selector: '[data-glightbox="true"]'
-    });
+    let lightbox: any;
 
+    // ✅ Only run in the browser
+    (async () => {
+      // Dynamically import only on client
+      const { default: GLightbox } = await import('glightbox');
+ 
+
+      lightbox = GLightbox({
+        selector: '[data-glightbox="true"]', // combines both effects
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true,
+      });
+    })();
+
+    // ✅ Cleanup when component unmounts
     return () => {
-      lightbox.destroy();
+      if (lightbox) {
+        lightbox.destroy();
+      }
     };
   }, []);
+
   return (
     <section className="wrapper bg-light">
       <div className="container py-14 py-md-16">
@@ -26,15 +43,15 @@ const BlogDetails: React.FC = () => {
                     alt="demo"
                     width={960}
                     height={600}
-                    className="w-100 h-auto"
+                    className="h-auto w-100"
                     style={{ color: 'transparent' }}
                   />
                 </figure>
                 <div className="card-body">
                   <div className="classic-view">
                     <article className="post">
-                      <div className="post-content mb-5">
-                        <h2 className="h1 mb-4">Cras mattis consectetur purus fermentum</h2>
+                      <div className="mb-5 post-content">
+                        <h2 className="mb-4 h1">Cras mattis consectetur purus fermentum</h2>
                         <p>
                           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
                           justo sit amet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras
@@ -48,17 +65,17 @@ const BlogDetails: React.FC = () => {
                           dolor ac elit aliquam tincidunt at at sapien. Aenean tortor libero, condimentum ac laoreet
                           vitae, varius tempor nisi. Duis non arcu vel lectus urna mollis ornare vel eu leo.
                         </p>
-                        <div className="row g-6 mt-3 mb-10">
+                        <div className="mt-3 mb-10 row g-6">
                           {[8, 9, 10, 11].map((num) => (
                             <div key={num} className="col-md-6">
-                              <figure className="hover-scale rounded cursor-dark">
+                              <figure className="rounded hover-scale cursor-dark">
                                 <a href={`img/photos/b${num}-full.jpg`} data-glightbox="true" data-gallery="post">
                                   <Image
                                     src={`/img/photos/b${num}.jpg`}
                                     alt="demo"
                                     width={460}
                                     height={307}
-                                    className="w-100 h-auto"
+                                    className="h-auto w-100"
                                     style={{ color: 'transparent' }}
                                   />
                                 </a>
@@ -75,7 +92,7 @@ const BlogDetails: React.FC = () => {
                           sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Cras mattis
                           consectetur purus sit amet fermentum. Praesent commodo cursus magna.
                         </p>
-                        <blockquote className="fs-lg my-8">
+                        <blockquote className="my-8 fs-lg">
                           <p>
                             Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula lacinia odio sem nec
@@ -83,7 +100,7 @@ const BlogDetails: React.FC = () => {
                           </p>
                           <footer className="blockquote-footer">Very important person</footer>
                         </blockquote>
-                        <h3 className="h2 mb-4">Sit Vulputate Bibendum Purus</h3>
+                        <h3 className="mb-4 h2">Sit Vulputate Bibendum Purus</h3>
                         <p>
                           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
                           justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur
@@ -100,12 +117,12 @@ const BlogDetails: React.FC = () => {
                           tellus ac cursus commodo, tortor mauris condimentum nibh.
                         </p>
                       </div>
-                      <div className="post-footer d-md-flex flex-md-row justify-content-md-between align-items-center mt-8">
+                      <div className="mt-8 post-footer d-md-flex flex-md-row justify-content-md-between align-items-center">
                         <div>
-                          <ul className="list-unstyled tag-list mb-0">
+                          <ul className="mb-0 list-unstyled tag-list">
                             {['Still Life', 'Urban', 'Nature'].map((tag) => (
                               <li key={tag}>
-                                <a className="btn btn-soft-ash btn-sm rounded-pill mb-0" href="#">
+                                <a className="mb-0 btn btn-soft-ash btn-sm rounded-pill" href="#">
                                   {tag}
                                 </a>
                               </li>
@@ -118,7 +135,7 @@ const BlogDetails: React.FC = () => {
                               aria-haspopup="true"
                               aria-expanded="false"
                               data-bs-toggle="dropdown"
-                              className="btn btn-sm btn-red rounded-pill btn-icon btn-icon-start dropdown-toggle mb-0 me-0"
+                              className="mb-0 btn btn-sm btn-red rounded-pill btn-icon btn-icon-start dropdown-toggle me-0"
                             >
                               <i className="uil uil-share-alt"></i> Share
                             </button>
@@ -139,15 +156,15 @@ const BlogDetails: React.FC = () => {
                     </article>
                   </div>
                   <hr />
-                  <div className="author-info d-md-flex align-items-center mb-3">
+                  <div className="mb-3 author-info d-md-flex align-items-center">
                     <div className="d-flex align-items-center">
-                      <figure className="user-avatar rounded-circle overflow-hidden">
+                      <figure className="overflow-hidden user-avatar rounded-circle">
                         <Image
                           src="/img/avatars/u5.jpg"
                           alt="demo"
                           width={120}
                           height={120}
-                          className="w-100 h-auto"
+                          className="h-auto w-100"
                           style={{ color: 'transparent' }}
                         />
                       </figure>
@@ -161,7 +178,7 @@ const BlogDetails: React.FC = () => {
                       </div>
                     </div>
                     <div className="mt-3 mt-md-0 ms-auto">
-                      <a className="btn btn-sm btn-soft-ash rounded-pill btn-icon btn-icon-start mb-0" href="#">
+                      <a className="mb-0 btn btn-sm btn-soft-ash rounded-pill btn-icon btn-icon-start" href="#">
                         <i className="uil uil-file-alt"></i> All Posts
                       </a>
                     </div>
@@ -186,30 +203,30 @@ const BlogDetails: React.FC = () => {
                   </nav>
                   <hr />
                   <h3 className="mb-6">You Might Also Like</h3>
-                  <div className="swiper-container blog grid-view mb-16">
+                  <div className="mb-16 swiper-container blog grid-view">
                     <div className="swiper">
                       <div className="swiper-wrapper">
                         {[4, 5, 6, 7].map((num) => (
                           <div key={num} className="swiper-slide">
                             <article>
-                              <figure className="overlay overlay-1 hover-scale rounded mb-6">
+                              <figure className="mb-6 rounded overlay overlay-1 hover-scale">
                                 <a href="#">
                                   <Image
                                     src={`/img/photos/b${num}.jpg`}
                                     alt="Ligula tristique quis risus"
                                     width={560}
                                     height={350}
-                                    className="w-100 h-auto"
+                                    className="h-auto w-100"
                                     style={{ color: 'transparent' }}
                                   />
                                   <span className="bg"></span>
                                 </a>
                                 <figcaption>
-                                  <h5 className="from-top mb-0">Read More</h5>
+                                  <h5 className="mb-0 from-top">Read More</h5>
                                 </figcaption>
                               </figure>
                               <div className="post-header">
-                                <h2 className="post-title h3 mb-3">
+                                <h2 className="mb-3 post-title h3">
                                   <a className="link-dark" href="#">
                                     Ligula tristique quis risus
                                   </a>
@@ -296,19 +313,19 @@ const BlogDetails: React.FC = () => {
                   </div>
                   <hr />
                   <form className="comment-form">
-                    <div className="form-floating mb-4">
+                    <div className="mb-4 form-floating">
                       <input type="text" className="form-control" placeholder="Name*" id="c-name" />
                       <label htmlFor="c-name">Name *</label>
                     </div>
-                    <div className="form-floating mb-4">
+                    <div className="mb-4 form-floating">
                       <input type="email" className="form-control" placeholder="Email*" id="c-email" />
                       <label htmlFor="c-email">Email*</label>
                     </div>
-                    <div className="form-floating mb-4">
+                    <div className="mb-4 form-floating">
                       <input type="text" className="form-control" placeholder="Website" id="c-web" />
                       <label htmlFor="c-web">Website</label>
                     </div>
-                    <div className="form-floating mb-4">
+                    <div className="mb-4 form-floating">
                       <textarea
                         name="textarea"
                         placeholder="Comment"
@@ -317,7 +334,7 @@ const BlogDetails: React.FC = () => {
                       ></textarea>
                       <label>Comment *</label>
                     </div>
-                    <button type="submit" className="btn btn-primary rounded-pill mb-0">
+                    <button type="submit" className="mb-0 btn btn-primary rounded-pill">
                       Submit
                     </button>
                   </form>
@@ -325,9 +342,9 @@ const BlogDetails: React.FC = () => {
               </div>
             </div>
           </div>
-          <aside className="col-lg-4 sidebar position-fixed top-0 end-0 vh-100 overflow-auto bg-light p-3 mt-15">
+          <aside className="top-0 p-3 overflow-auto col-lg-4 sidebar position-fixed end-0 vh-100 bg-light mt-15">
             <div className="widget">
-              <h4 className="widget-title mb-3">Categories</h4>
+              <h4 className="mb-3 widget-title">Categories</h4>
               <ul className="unordered-list bullet-primary text-reset">
                 {[
                   { name: 'Teamwork', count: 21 },
@@ -346,7 +363,7 @@ const BlogDetails: React.FC = () => {
               </ul>
             </div>
             <div className="widget">
-              <h4 className="widget-title mb-3">Popular Posts</h4>
+              <h4 className="mb-3 widget-title">Popular Posts</h4>
               <ul className="image-list">
                 {[1, 2, 3].map((num) => (
                   <li key={num}>
@@ -357,7 +374,7 @@ const BlogDetails: React.FC = () => {
                           alt="demo"
                           width={100}
                           height={100}
-                          className="w-100 h-auto"
+                          className="h-auto w-100"
                           style={{ color: 'transparent' }}
                         />
                       </figure>
@@ -389,13 +406,13 @@ const Comment: React.FC<{ comment: any }> = ({ comment }) => {
     <li className="comment">
       <div className="comment-header d-md-flex align-items-center">
         <div className="d-flex align-items-center">
-          <figure className="user-avatar rounded-circle overflow-hidden">
+          <figure className="overflow-hidden user-avatar rounded-circle">
             <Image
               src={`/img/avatars/${comment.avatar}.jpg`}
               alt="demo"
               width={120}
               height={120}
-              className="w-100 h-auto"
+              className="h-auto w-100"
               style={{ color: 'transparent' }}
             />
           </figure>
@@ -413,7 +430,7 @@ const Comment: React.FC<{ comment: any }> = ({ comment }) => {
           </div>
         </div>
         <div className="mt-3 mt-md-0 ms-auto">
-          <button className="btn btn-soft-ash btn-sm rounded-pill btn-icon btn-icon-start mb-0">
+          <button className="mb-0 btn btn-soft-ash btn-sm rounded-pill btn-icon btn-icon-start">
             <MessageCircle className="uil uil-comments" /> Reply
           </button>
         </div>

@@ -20,14 +20,9 @@ import 'glightbox/dist/css/glightbox.css';
 import 'plugins/scrollcue/scrollCue.css';
 // Bootstrap and custom scss
 import 'assets/scss/style.scss';
-import { LazyMotion } from 'framer-motion';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Navbar } from 'components/blocks/navbar';
 import PageProgress from 'components/common/PageProgress';
 import Link from 'next/link';
-import Progress from 'components/Progress';
-import ScrollCue from 'components/ScrollCue';
 
 function MyApp({ Component, pageProps:{session, ...pageProps } }: AppProps) {
   const { pathname } = useRouter();
@@ -53,19 +48,7 @@ function MyApp({ Component, pageProps:{session, ...pageProps } }: AppProps) {
   }, [pathname]);
 
   useEffect(() => setLoading(false), []);
-  const loadFeatures = () =>
-    import("../src/utils/framer-motion-features/dom-max").then(res => res.default)
 
-  const [queryClient] = useState(
-    () =>
-      new QueryClient({
-        defaultOptions: {
-          queries: {
-            staleTime: 5 * 1000
-          }
-        }
-      })
-  );
 
   return (
     <>
@@ -75,20 +58,11 @@ function MyApp({ Component, pageProps:{session, ...pageProps } }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Rexcoders Coding Academy | Live your Passion</title>
       </Head>
-      <QueryClientProvider client={queryClient}>
-          <ReactQueryDevtools initialIsOpen={false} />
-      <LazyMotion strict features={loadFeatures}>
+   
       <ThemeProvider>
         {loading ? ( <div className="page-loader" />) : (
          <>
-              {/* USED FOR SCROLL ANIMATION */}
-        <ScrollCue />
-
-{/* USED FOR PAGE SCROLL PROGRESS BAR */}
-<PageProgress />
-
-{/* USED FOR PROGRESS BAR ANIMATE */}
-<Progress />
+           <PageProgress />
            <header className="position-absolute w-100">
              <Navbar
              fancy
@@ -123,8 +97,6 @@ function MyApp({ Component, pageProps:{session, ...pageProps } }: AppProps) {
          </>
         )}
       </ThemeProvider>
-      </LazyMotion>
-      </QueryClientProvider>
     </>
   );
 }

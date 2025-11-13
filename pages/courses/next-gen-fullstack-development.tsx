@@ -5,7 +5,7 @@ import type { NextPage } from 'next';
 import { CareerSupport, TrainingModules } from 'components/blocks/services';
 import { Footer } from 'components/blocks/footer';
 import { ShortCourseList } from 'components/blocks/courses';
-import { VideoTestimonials } from '../_components/VideoTestimonials';
+import  VideoTestimonials  from '../_components/VideoTestimonials';
 import HowWeDoIt from '../_components/HowWeDoIt';
 import TrustedHiringPartners from '../_components/TrustedHiringPartners';
 import HomeTestimonialGrid from '../_components/HomeTestimonialGrid';
@@ -14,9 +14,7 @@ import CTA from '../_components/CTA';
 import Hero from './_components/data-analytics/Hero';
 
 const DataAnalytics: NextPage = () => {
-  const loadFeatures = () =>
-    import("../../src/utils/framer-motion-features/dom-max").then(res => res.default)
-  
+
   const courseList = [
     {
       id: 1,

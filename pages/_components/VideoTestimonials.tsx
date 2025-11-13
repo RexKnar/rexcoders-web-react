@@ -1,14 +1,16 @@
 "use client";
 import Carousel from "components/reuseable/Carousel";
+import { FC } from "react";
 // import Plyr from 'plyr-react';
 import ReactPlayer from 'react-player'
 
-export const VideoTestimonials = () => {
+ const VideoTestimonials : FC = () => {
   const videoList= ['https://www.youtube.com/watch?v=PtKPv6mOwow','https://www.youtube.com/watch?v=7FCvJMTFPMI', 'https://www.youtube.com/watch?v=O4fuIMF9u2k', 'https://www.youtube.com/watch?v=-kJ3po7zcvE']
   return (
     <div className="mb-10 swiper-container swiper-auto swiper-auto-xs mb-md-12" >
     <Carousel
       loop
+      updateOnWindowResize
       speed={3000}
       autoplaySpeed={3000}
       spaceBetween={2}
@@ -110,3 +112,6 @@ export const VideoTestimonials = () => {
   </div>
   );
 };
+
+
+export default VideoTestimonials;

@@ -5,16 +5,14 @@ import { Hero } from 'components/blocks/hero';
 import { CareerSupport, TrainingModules } from 'components/blocks/services';
 import { Footer } from 'components/blocks/footer';
 import { ShortCourseList } from 'components/blocks/courses';
-import { VideoTestimonials } from './_components/VideoTestimonials';
+import  VideoTestimonials  from './_components/VideoTestimonials';
 import TrustedHiringPartners from './_components/TrustedHiringPartners';
 import HomeTestimonialGrid from './_components/HomeTestimonialGrid';
 import HomeAbout from './_components/HomeAbout';
 import CTA from './_components/CTA';
 
 const Home: NextPage = () => {
-  const loadFeatures = () =>
-    import("../src/utils/framer-motion-features/dom-max").then(res => res.default)
-  
+
   const courseList = [
     {
       id: 1,
