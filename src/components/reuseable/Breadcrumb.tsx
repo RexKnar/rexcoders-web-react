@@ -10,7 +10,7 @@ type BreadcrumbProps = {
 
 const breadcrumb = [
   { id: 1, title: 'Home', url: '/' },
-  { id: 2, title: 'Shop', url: '/shop' }
+  { id: 2, title: '', url: '/' }
 ];
 
 const Breadcrumb: FC<BreadcrumbProps> = ({ data = breadcrumb, className = '' }) => {

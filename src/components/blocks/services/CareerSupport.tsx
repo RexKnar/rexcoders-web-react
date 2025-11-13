@@ -18,36 +18,40 @@ const CareerSupport: FC = () => {
     title: 'Resume Building',
     cardColor: 'bg-pale-yellow',
     columnClass: 'col-md-5 offset-md-1 align-self-end',
-    description: 'Our experts are on standby to assist you in crafting a winning resume and cover letter'
-  },{
+    description: 'Get personalized guidance to craft a clear, professional resume and cover letter that highlights your skills, projects, and strengths effectively.'
+  },
+  {
     id: 2,
     Icon: Shield,
     color: color.red,
-    title: 'LinkedIn Profile Optimization ',
+    title: 'LinkedIn Profile Optimization',
     cardColor: 'bg-pale-red',
     columnClass: 'col-md-6 align-self-end',
-    description: 'We\'ll optimize your LinkedIn profile, showcase your skills & experience & making sure you stand out in the vast digital landscape'
+    description: 'We’ll help you optimize your LinkedIn profile to showcase your work, improve visibility to recruiters, and build a strong professional identity online.'
   },
   {
     id: 3,
-    color: color.leaf,
     Icon: Insurance,
-    title: ' Mock Interviews',
+    color: color.leaf,
+    title: 'Mock Interviews',
     cardColor: 'bg-pale-leaf',
     columnClass: 'col-md-5',
-    description: 'Ready yourself with mock interviews, where industry experts from leading MNCs will provide insights and guidance'
+    description: 'Practice and improve through mock interviews conducted by industry professionals from top companies, helping you gain confidence and interview readiness.'
   },
   {
     id: 4,
     Icon: Team,
     color: color.primary,
-    title: 'Soft Skills Training',
+    title: 'Job Referral Network',
     cardColor: 'bg-pale-primary',
     columnClass: 'col-md-6 align-self-start',
-    description: 'We understand that landing your dream job requires something more than your skill. That\'s why a part of our training focuses on refining your communication abilities and strengthening your professional network'
-  }]
+    description: 'We go beyond training by helping you get noticed by the right employers. Through our trusted referral network of hiring partners, you’ll have priority access to real job and internship opportunities in the IT industry.'
+  }];
+ 
   return (
-    <section className="container wrapper bg-light">
+    <section >
+    <div className="container wrapper ">
+
     <div className="mt-0 row gx-lg-8 gx-xl-12 gy-10 mb-xl-12 align-items-center">
       <div className="flex-row col-lg-5">
         <div>
@@ -62,11 +66,12 @@ const CareerSupport: FC = () => {
         </div>
         <div>
         <h2 className="mb-3 fs-15 text-uppercase text-muted"></h2>
-        <h3 className="mb-5 display-4">Career Support</h3>
+        <h3 className="mb-5 display-4">Your Career Launchpad</h3>
         <p>
-        We don't just get you job-ready, we empower you to conquer your job hunt and shine in interviews.
+        {/* We don't just get you job-ready, we empower you to conquer your job hunt and shine in interviews. */}
+        We don’t just make you job-ready, we help you stand out and succeed in interviews and real hiring situations.
         </p>
-        <NextLink title="Book a 1:1" href="#" className="mt-3 btn btn-navy rounded-pill" />
+        <NextLink title="Book a 1:1 Career Call" href="#" className="mt-3 btn btn-navy rounded-pill" />
         </div>
       </div>
       <div className="col-lg-7 ">
@@ -78,6 +83,7 @@ const CareerSupport: FC = () => {
       </div>
 
       
+    </div>
     </div>
     </section>
   );

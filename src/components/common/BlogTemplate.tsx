@@ -1,3 +1,4 @@
+"use client";
 import Plyr from 'plyr-react';
 import Image from 'next/image';
 import { FC, Fragment } from 'react';

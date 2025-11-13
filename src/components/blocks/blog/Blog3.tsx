@@ -20,7 +20,7 @@ const Blog3: FC = () => {
       <div className="swiper-container blog grid-view mb-18">
         <Carousel grabCursor navigation={false} breakpoints={carouselBreakpoints}>
           {blogList2.map((item) => (
-            <BlogCard1 key={item.id} {...item} />
+            <BlogCard1 description={''} key={item.id} {...item} />
           ))}
         </Carousel>
       </div>

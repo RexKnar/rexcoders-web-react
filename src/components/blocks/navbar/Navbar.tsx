@@ -1,4 +1,3 @@
-
 import LinkType from 'types/link';
 import { FC, ReactElement, useRef } from 'react';
 // -------- custom hook -------- //
@@ -35,6 +34,7 @@ type NavbarProps = {
   button?: ReactElement;
   navOtherClass?: string;
 };
+
 // ===================================================================
 
 const Navbar: FC<NavbarProps> = (props) => {
@@ -61,7 +61,7 @@ const Navbar: FC<NavbarProps> = (props) => {
   const headerContent = (
     <>
       <div className="navbar-brand w-90">
-        <NextLink href="/" title={<img alt="logo" src={`/img/${logo}@2x.png`} srcSet={`/img/${logo}@2x.png 2x`} />} />
+        <NextLink href="/" title={<img alt="logo" src={`/img/${logo}@2x.png`} srcSet={`/img/${logo}@2x.png 2x`} className='h-8' />} />
       </div>
 
       <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -72,30 +72,8 @@ const Navbar: FC<NavbarProps> = (props) => {
 
         <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
           <ul className="navbar-nav">
-            {/* ===================== pages nav item ===================== */}
-            {navItems.map(({ id, title, path, children }) => (
-              <>
-                {children.length ? (
-                  <>
-                  <li className="nav-item dropdown" key={id}>
-                    <DropdownToggleLink title={title} className="nav-link dropdown-toggle" />
-                    <ul className="dropdown-menu">
-                      {children.map(({ id, title,path, children }:any) => (
-                        <li className="dropdown dropdown-submenu dropend" key={id}>
-                          <DropdownToggleLink title={title} className="dropdown-item dropdown-toggle" />
-                          <ul className="dropdown-menu">{renderLinks(children)}</ul>
-                        </li>
-                      ))}
-                      
-                    </ul>
-                    </li>
-                  </>
-                ) : (
-                  <ListItemLink href={path} title={title}  key={id} />
-                )}
-             </>
-
-              
+            {navItems.map(({ id, title, path }) => (
+              <ListItemLink href={path} title={title} key={id} />
             ))}
           </ul>
         </div>
@@ -104,7 +82,7 @@ const Navbar: FC<NavbarProps> = (props) => {
       {/* ============= right side header content ============= */}
       <div className={navOtherClass}>
         <ul className="flex-row navbar-nav align-items-center ms-auto">
-          {/* ============= language dropdwown ============= */}
+          {/* ============= language dropdown ============= */}
           {language && <Language />}
 
           {/* ============= info button ============= */}
@@ -127,8 +105,6 @@ const Navbar: FC<NavbarProps> = (props) => {
 
           {/* ============= contact button ============= */}
           {button && <li className="nav-item d-none d-md-block">{button}</li>}
-
-      
 
           {/* ============= social icons link ============= */}
           {social && <Social />}
@@ -165,8 +141,8 @@ const Navbar: FC<NavbarProps> = (props) => {
 
       {/* ============= signup modal ============= */}
       <Signup />
-      
-      <OneToOne/>
+
+      <OneToOne />
 
       {/* ============= info sidebar ============= */}
       {info && <Info />}

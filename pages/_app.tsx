@@ -20,22 +20,25 @@ import 'glightbox/dist/css/glightbox.css';
 import 'plugins/scrollcue/scrollCue.css';
 // Bootstrap and custom scss
 import 'assets/scss/style.scss';
-import { LazyMotion } from 'framer-motion';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Navbar } from 'components/blocks/navbar';
 import PageProgress from 'components/common/PageProgress';
+import Link from 'next/link';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps:{session, ...pageProps } }: AppProps) {
   const { pathname } = useRouter();
   const [loading, setLoading] = useState(true);
+  const [fullUrl, setFullUrl] = useState<string | null>(null);
 
-  // added bootstrap functionality
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setFullUrl(window.location.href); // e.g., https://example.com/dashboard?tab=settings
+    }
+  }, []);
+
   useEffect(() => {
     if (typeof window !== 'undefined') import('bootstrap');
   }, []);
 
-  // scroll animation added
   useEffect(() => {
     (async () => {
       const scrollCue = (await import('plugins/scrollcue')).default;
@@ -44,56 +47,56 @@ function MyApp({ Component, pageProps }: AppProps) {
     })();
   }, [pathname]);
 
-  // manage loading status
   useEffect(() => setLoading(false), []);
-  const loadFeatures = () =>
-    import("../src/utils/framer-motion-features/dom-max").then(res => res.default)
 
-
-  const [queryClient] = useState(
-    () =>
-      new QueryClient({
-        defaultOptions: {
-          queries: {
-            staleTime: 5 * 1000
-          }
-        }
-      })
-  );
 
   return (
     <>
+   
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Rexcoders Coding Academy | Live your Passion</title>
       </Head>
-      <QueryClientProvider client={queryClient}>
-          <ReactQueryDevtools initialIsOpen={false} />
-      <LazyMotion strict features={loadFeatures}>
+   
       <ThemeProvider>
-        
         {loading ? ( <div className="page-loader" />) : (
          <>
            <PageProgress />
-         
-         <header className="position-absolute w-100">
-                <Navbar
-                  info
-                  navOtherClass="navbar-other ms-lg-4"
-                  navClassName="navbar navbar-expand-lg center-nav  navbar-bg-light"
-                  button={<a
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modal-onetoone"
-                    className="rounded btn btn-sm btn-primary"
-                  >
-                    Book 1:1
-                  </a>} />
-              </header><Component {...pageProps} /></>)}
+           <header className="position-absolute w-100">
+             <Navbar
+             fancy
+                navClassName="navbar navbar-expand-lg fancy navbar-light navbar-bg-light caret-none"
+              //  navClassName="navbar navbar-expand-lg center-nav navbar-bg-light pt-2"
+               button={
+                 <>
+                   <a
+                     href="#"
+                     data-bs-toggle="modal"
+                     data-bs-target="#modal-onetoone"
+                     className="rounded btn btn-sm btn-primary me-2"
+                   >
+                     Book 1:1
+                   </a>
+                   <Link href={`http://localhost:3000/signin?callbackUrl=${fullUrl}`}> Sign IN</Link>
+
+                   {/* <a
+                     href="#"
+                     data-bs-toggle="modal"
+                     data-bs-target="#modal-signin"
+                     className="rounded btn btn-sm btn-outline-primary me-2"
+                   >
+                     Sign In
+                   </a> */}
+                  
+                 </>
+               }
+             />
+           </header>
+           <Component {...pageProps} />
+         </>
+        )}
       </ThemeProvider>
-      </LazyMotion>
-      </QueryClientProvider>
     </>
   );
 }

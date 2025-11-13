@@ -16,7 +16,7 @@ const About25: FC = () => {
                 <Image
                   width={1000}
                   height={850}
-                  src="/img/photos/about30.jpg"
+                  src="/img/illustrations/custom/bwink_ppl_01_single_01 [Converted]-01.png"
                   alt=""
                   style={{ width: '100%', height: 'auto' }}
                 />

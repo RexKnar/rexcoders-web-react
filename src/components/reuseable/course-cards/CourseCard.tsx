@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 
 const CourseCard: FC<any> = (props) => {
-  const { id, name, image, technologies } = props;
+  const { id, name, image, technologies, path='#' } = props;
   const techLogos: { [key: string]: string } ={
     react:"/img/icons/tech/react/icons8-react-100.svg",
     angular: "/img/icons/tech/angular/icons8-angularjs-48.svg",
@@ -17,7 +17,7 @@ const CourseCard: FC<any> = (props) => {
   return (
     <div className="shadow-lg card" key={id}>
                   <figure className="card-img-top overlay overlay-1">
-                    <Link href="#" passHref legacyBehavior>
+                    <Link href={path} passHref legacyBehavior>
                       <a>
                         <img className="img-fluid" src={image['1x']}  alt="" />
                         <span className="bg" />
