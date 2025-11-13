@@ -4,6 +4,7 @@ import Carousel from "components/reuseable/Carousel";
 import ReactPlayer from 'react-player'
 
 export const VideoTestimonials = () => {
+  const videoList= ['https://www.youtube.com/watch?v=PtKPv6mOwow','https://www.youtube.com/watch?v=7FCvJMTFPMI', 'https://www.youtube.com/watch?v=O4fuIMF9u2k', 'https://www.youtube.com/watch?v=-kJ3po7zcvE']
   return (
     <div className="mb-10 swiper-container swiper-auto swiper-auto-xs mb-md-12" >
     <Carousel
@@ -45,10 +46,10 @@ export const VideoTestimonials = () => {
       wrapperClass="swiper-wrapper ticker"
       className="overflow-visible " 
       dir="rtl">
-      {[1, 2, 3, 4, 5, 6, 7].map((num) => (
-        <div key={num} className="overflow-hidden shadow-xl rounded-xl ms-5 " >
+      {videoList.map((num,index) => (
+        <div key={index} className="overflow-hidden shadow-xl rounded-xl ms-5 " >
         <ReactPlayer  key={num} style={{height:"300px"}}  className="w-auto h-full"
-    src="https://www.youtube.com/watch?v=PtKPv6mOwow"
+    src={num}
  
       />
       
@@ -96,10 +97,10 @@ export const VideoTestimonials = () => {
       wrapperClass="swiper-wrapper ticker"
       className="overflow-visible " 
       dir="ltr">
-      {[1, 2, 3, 4, 5, 6, 7].map((num) => (
-        <div key={num} className="overflow-hidden shadow-xl rounded-xl ms-5 " >
-        <ReactPlayer  key={num} style={{height:"250px"}}  className="w-auto h-full"
-    src="https://www.youtube.com/watch?v=PtKPv6mOwow"
+      {videoList.map((num,index) => (
+        <div key={index} className="overflow-hidden shadow-xl rounded-xl ms-5 " >
+        <ReactPlayer  key={num} style={{height:"300px"}}  className="w-auto h-full"
+    src={num}
  
       />
       

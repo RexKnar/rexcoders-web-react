@@ -4,19 +4,12 @@ import type { NextPage } from 'next';
 import { Hero } from 'components/blocks/hero';
 import { CareerSupport, TrainingModules } from 'components/blocks/services';
 import { Footer } from 'components/blocks/footer';
-import { GoogleTestimonial } from 'components/blocks/testimonial';
 import { ShortCourseList } from 'components/blocks/courses';
-import { useGetCourseListQuery } from 'hooks/queries/training/useGetCourseListQuery';
-import { useEffect, useState } from 'react';
 import { VideoTestimonials } from './_components/VideoTestimonials';
-import HowWeDoIt from './_components/HowWeDoIt';
 import TrustedHiringPartners from './_components/TrustedHiringPartners';
 import HomeTestimonialGrid from './_components/HomeTestimonialGrid';
-import { About6 } from 'components/blocks/about';
 import HomeAbout from './_components/HomeAbout';
-import { CTA2 } from 'components/blocks/call-to-action';
 import CTA from './_components/CTA';
-// import Plyr from 'plyr-react';
 
 const Home: NextPage = () => {
   const loadFeatures = () =>
@@ -27,7 +20,7 @@ const Home: NextPage = () => {
       id: 1,
       photos: 5,
       category: 'fullstack',
-      path:'',
+      path:'#',
       name: 'AI-Enhanced Fullstack Development',
       technologies: ['html', 'css', 'javascript', 'react', 'angular', 'nodejs', 'mysql'],
       image: {
@@ -39,7 +32,7 @@ const Home: NextPage = () => {
       id: 2,
       photos: 5,
       category: 'data-science',
-      path:'',
+      path:'/courses/data-analytics-visualization-program',
       name: 'Next-Gen Data Analytics Program',
       technologies: ['html', 'css', 'javascript', 'react', 'angular', 'nodejs', 'mysql'],
       image: {
@@ -94,13 +87,7 @@ const Home: NextPage = () => {
           </section>
           
           <CareerSupport />
-         
-          {/* <Testimonial8 /> */}
-            {/* <section className="bg-soft-primary wrapper">
-            <div className="container py-15 py-md-17">
-            <HowWeDoIt />
-            </div>
-            </section> */}
+
             <section className=" bg-soft-primary wrapper">
             <div className='mx-auto'>
                 <div className="mx-auto my-auto col-lg-5 col-6 ms-auto col-xl-4 d-lg-flex">

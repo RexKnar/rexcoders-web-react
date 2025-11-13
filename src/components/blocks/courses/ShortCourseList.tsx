@@ -1,9 +1,6 @@
 'use client'
 
-import { FC } from 'react';
-import Link from 'next/link';
-import Carousel from 'components/reuseable/Carousel';
-import { BE_BASE_URL } from 'utils/constants/config';
+
 import CourseCard from 'components/reuseable/course-cards/CourseCard';
 
 
