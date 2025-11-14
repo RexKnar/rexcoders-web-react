@@ -15,7 +15,7 @@ const FigureImage: FC<FigureImageProps> = (props) => {
 
   return (
     <figure className={className} {...others}>
-      <img width={width} height={height} src={src} alt="demo" style={{ width: '100%', height: 'auto' }} />
+      <img width={width} height={height} src={src} alt="Hiring Partner" style={{ width: '100%', height: 'auto' }} />
     </figure>
   );
 };
