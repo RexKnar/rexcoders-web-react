@@ -14,31 +14,31 @@ const navItems : any[]=[
     path:'/about',
     children: []
   },
-{
-  id: 3,
-  title: 'Courses',
-  path:'/courses',
-  children: []
-},
-{
-    id: 4,
-    title: 'Events',
-    path:'/events',
-    children: []
-  },
-  {
-    id: 5,
-    title: 'Blogs',
-    path:'/blogs',
-    children: []
-  },
+// {
+//   id: 3,
+//   title: 'Courses',
+//   path:'/courses',
+//   children: []
+// },
+// {
+//     id: 4,
+//     title: 'Events',
+//     path:'/events',
+//     children: []
+//   },
+//   {
+//     id: 5,
+//     title: 'Blogs',
+//     path:'/blogs',
+//     children: []
+//   },
 
-{
-  id: 6,
-  title: 'Contact',
-  path:'/contact',
-  children: []
-},
+// {
+//   id: 6,
+//   title: 'Contact',
+//   path:'/contact',
+//   children: []
+// },
                ];
 
 

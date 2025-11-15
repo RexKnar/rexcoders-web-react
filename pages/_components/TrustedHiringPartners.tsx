@@ -24,7 +24,7 @@ const TrustedHiringPartners: FC = () => {
             <div className="row row-cols-2 row-cols-md-4 gx-0 gx-md-8 gx-xl-12 gy-12">
               {topSixCompanies.map((item) => (
                 <div className="align-content-center col" key={item}>
-                  <FigureImage width={450} height={301} src={item} className="px-3 px-md-0 px-xxl-2" />
+                  <FigureImage width={450} height={301} src={item}  className="px-3 px-md-0 px-xxl-2" />
                 </div>
               ))}
             </div>
